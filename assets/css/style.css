@@ -13,6 +13,11 @@ body {
     flex-direction: column;
     font-family: 'poppins', sans-serif;
     font-size: 16px;
+    min-height: 100%;
+}
+
+main {
+    height: 100%;
 }
 
 .quiz-container {
@@ -22,21 +27,58 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    width: 100%;
     height: 90vh;
 }
+
+#quiz-box {
+    background-color: #fff;
+    border: 1px solid #cfdbc5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 200px;
+    position: relative;
+    width: 80%;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.question-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.quiz-options {
+    padding: 10px 0;
+}
+
 
 /* start of media queries section  */
 /* landscape */
 /* screen sizes equal to or larger than 560px wide */
 @media screen and (min-width: 560px) 
-and (oreientation: landscape) {
+and (orientation: landscape) {
     
-    /* hero image */
-    #hero-image {
-        aspect-ratio: 3/1;
-        background: #000 url('../images/hero-image-afrobeats.webp') center center/cover no-repeat;
-        margin-top: 0;
-        min-width: 100%;
-        position: absolute;
+    #quiz-box {
+        margin: 150px 0 0 250px;
+        width: 30%;
     }
+
 }
