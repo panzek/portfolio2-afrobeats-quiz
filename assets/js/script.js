@@ -173,9 +173,38 @@ let questions = [
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    let randomNum = Math.floor(Math.random() * questions.length);
-    let randomQuestion = questions[randomNum];
-    console.log(randomQuestion);
+    //get the question and options values from the DOM and store these values in variables
+
+    let currentQuestion = document.getElementById('question');
+    let option1 = document.getElementsByClassName('option1')[0].innerText;
+    let option2 = document.getElementsByClassName('option2')[0].innerText;
+    let option3 = document.getElementsByClassName('option3')[0].innerText;
+    let option4 = document.getElementsByClassName('option4')[0].innerText;
+
+    console.log(currentQuestion.innerText);
+    console.log(option1);
+    console.log(option2);
+    console.log(option3);
+    console.log(option4);
+
+    startQuiz()
 
 })
+
+function startQuiz(){
+  
+    let randomNum = Math.floor(Math.random() * questions.length);
+    let randomQuestion = questions[randomNum];
+    console.log(randomQuestion)
+    let currentQuestion = randomQuestion.question;
+    console.log(currentQuestion);
+    let correctAnswer = randomQuestion.rightAnswer;
+    console.log(correctAnswer);
+
+    displayQuestion()
+}
+
+function displayQuestion(correctAnswer) {
+
+}
 

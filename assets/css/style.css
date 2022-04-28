@@ -105,6 +105,11 @@ main {
     width: 200px; 
 }
 
+/* footer */
+footer {
+    margin: auto;
+}
+
 
 /* Start of media queries section  */
 
@@ -193,7 +198,7 @@ and (orientation: landscape) {
     
     #quiz-box {
         border: 2px solid #cfdbc5;
-        margin: 220px 0 0 100px;
+        margin: 20px 0 0 100px;
         width: 43%;
     }
 
