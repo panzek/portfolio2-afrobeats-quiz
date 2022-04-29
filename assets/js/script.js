@@ -7,7 +7,7 @@ let questions = [
         option2: "Best rap song Grammy",
         option3: "Album of the year Grammy", 
         option4: "Global Music album Grammy", 
-        rightAnswer: "option4"
+        answer: 4
     },
     {
         question: "Which artist released the major breakout song 'Dumebi' from his self-titled EP in 2019?", 
@@ -15,7 +15,7 @@ let questions = [
         option2: "Naira Marley",
         option3: "Rema", 
         option4: "Mayorkun", 
-        rightAnswer: "option3"
+        answer: 3
     },
     {
         question: "Which artist won the Grammy award for 'Global Music Album' in 2022?", 
@@ -23,7 +23,7 @@ let questions = [
         option2: "Wizkid", 
         option3: "Angélique Kidjo", 
         option4: "Wande Coal", 
-        rightAnswer: "option3"
+        answer: 3
     },
     {
         question: "Which Artist released the song 'Eloko Oyo' in 2017?", 
@@ -31,7 +31,7 @@ let questions = [
         option2: "Koffi Olomide", 
         option3: "Awilo Longomba", 
         option4: "Innoss'B", 
-        rightAnswer: "option1"
+        answer: 1
     },
     {
         question: "Davido founded the record label DMW in 2016. What does DMW stand for?", 
@@ -39,7 +39,7 @@ let questions = [
         option2: "Dance Masters Worldwide", 
         option3: "Davido's Media Wins", 
         option4: "Davido Millions Works", 
-        rightAnswer: "option1"
+        answer: 1
     },
     {
         question: "Which artist won the Grammy award for 'Best Music Video' in 2021", 
@@ -47,7 +47,7 @@ let questions = [
         option2: "Sikiru Adepoju", 
         option3: "Chamillionaire", 
         option4: "Burna Boy", 
-        rightAnswer: "option1"
+        answer: 1
     },
     {
         question: "Where did Afrobeats music originate?", 
@@ -55,7 +55,7 @@ let questions = [
         option2: "South Africa", 
         option3: "Ghana", 
         option4: "A and C", 
-        rightAnswer: "option4"
+        answer: 4
     },
     {
         question: "Finish the lyrics from Whizkid (ft. Tems) Essence: 'Time is of the essence, I tried to teach you…'", 
@@ -63,7 +63,7 @@ let questions = [
         option2: "…But I might need some lessons.", 
         option3: "…But I have a confession.",
         option4: "…But there is some resistance.", 
-        rightAnswer: "option2"
+        answer: 2
     },
     {
         question: "Who is the Nigerian composer, multi-instrumentalist, and politician activist known as the 'Pioneer of Afrobeats'?", 
@@ -71,7 +71,7 @@ let questions = [
         option2: "Mulatu Astake", 
         option3: "Salif Keita", 
         option4: "Manu Dibangu", 
-        rightAnswer: "option1"
+        answer: 1
     },
     {
         question: "In the song 'Kumama Papa' what does 'Azalaka Kisi ya soni' translate to?", 
@@ -79,7 +79,7 @@ let questions = [
         option2: "He has shown me mercy", 
         option3: "He is the medicine for shame", 
         option4: "He will show me the way", 
-        rightAnswer: "option3"
+        answer: 3
     },
     {
         question: "In the name 'Zlatan Ibile' what does Ibile translate to?", 
@@ -87,7 +87,7 @@ let questions = [
         option2: "Local", 
         option3: "Favourite", 
         option4: "Special", 
-        rightAnswer: "option2"
+        answer: 2
     },
     {
         question: "Which central African artist is nicknamed 'Dicap La marveille'?", 
@@ -95,7 +95,7 @@ let questions = [
         option2: "Fally Ipupa", 
         option3: "Diamond Platinumz", 
         option4: "Burna Boy", 
-        rightAnswer: "option2"
+        answer: 2
     },
     {
         question: "What does Amapiano in the song 'Ameno Amapiano' by Goya Menor, Nektunez mean?", 
@@ -103,7 +103,7 @@ let questions = [
         option2: "The singers", 
         option3: "The runners", 
         option4: "The artist", 
-        rightAnswer: "option1"
+        answer: 1
     },
     {
         question: "In April 2022, what was the most shazammed song in the world?", 
@@ -111,7 +111,7 @@ let questions = [
         option2: "Don't call me", 
         option3: "Sungba", 
         option4: "The Best", 
-        rightAnswer: "option1"
+        answer: 1
     },
     {
         question: "What genre does the song 'Jerusalema' by Master KG fall under?", 
@@ -119,7 +119,7 @@ let questions = [
         option2: "Hip hop", 
         option3: "Rock", 
         option4: "Pop", 
-        rightAnswer: "option1"
+        answer: 1
     },
     {
         question: "What is the Ghanaian artist Shatta Wale's real name?", 
@@ -127,7 +127,7 @@ let questions = [
         option2: "Ayodeji Ibrahim Balogun", 
         option3: "Damini Ebunoluwa Ogulu",
         option4: "Oluwatosin Oluwole Ajibade",
-        rightAnswer: "option1" 
+        answer: 1 
     },
     {
         question: "The afrobeat song 'Jinja' was created by which artist?", 
@@ -135,7 +135,7 @@ let questions = [
         option2: "Zinoleesky", 
         option3: "Rahman Jago", 
         option4: "Barry Jay", 
-        rightAnswer: "option1"
+        answer: 1
     },
     {
         question: "Which Irish African artist released the latest single 'Truth Be Told'", 
@@ -143,7 +143,7 @@ let questions = [
         option2: "Plantain Papi", 
         option3: "Offica", 
         option4: "Andre Faz", 
-        rightAnswer: "option1"
+        answer: 1
     },
     {
         question: "The song 'ZaZoo Zehh' is by", 
@@ -151,7 +151,7 @@ let questions = [
         option2: "Poco Lee and Olamide Ft. Portable", 
         option3: "Portable and Poco Lee Ft. Olamide", 
         option4: "Portable and Olamide Ft. Poco Lee",
-        rightAnswer: "option3"
+        answer: 3
     },
     {
         question: "Don't 'Rush' is by this UK Afrobeats artist",
@@ -159,7 +159,7 @@ let questions = [
         option2: "J Hus",
         option3: "Nonzus Magnus",
         option4: "Kojo Funds",
-        rightAnswer: "option1"
+        answer: 1
     },
     {
         question: "The song Azonto is by", 
@@ -167,7 +167,7 @@ let questions = [
         option2: "Yxng Bane", 
         option3: "Fuse ODG", 
         option4: "Juls",
-        rightAnswer: "option3"
+        answer: 3
     }
 ]
 
@@ -191,6 +191,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 })
 
+/**
+ * start the quiz on user click of the start button after creating username
+ */
 function startQuiz(){
   
     let randomNum = Math.floor(Math.random() * questions.length);
@@ -204,7 +207,41 @@ function startQuiz(){
     displayQuestion()
 }
 
-function displayQuestion(correctAnswer) {
+/** 
+ * Display quiz when page is loaded
+ * to be called inside the start quiz function
+*/
+function displayQuestion() {
 
 }
 
+/**
+ * check user selected value and the correct answer
+ * and apply background color specific to correct and incorrect answers 
+ */
+function selectAnswer() {
+
+}
+
+/**
+ * Checks the user's selected answer and the correct answer
+ */
+function checkAnswer() {
+
+}
+
+/**
+ * Keeps track of user's score and 
+ * increment the score count if the answer is correct
+ */
+function increaseScore() {
+
+}
+
+
+/**
+ * increment the score count if the answer is incorrect
+ */
+function incrementWrongAnswer() {
+
+}
