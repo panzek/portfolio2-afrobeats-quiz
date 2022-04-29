@@ -1,5 +1,22 @@
 /* Global style */
 
+:root {
+
+    /* ------- COLORS ------ */
+    --earthy-green: #cfdbc5;
+    --Asparagus: #89a670;
+    --khaki: #c3b091; 
+    --red-ochre: #913831; 
+    --off-white: #f2f2f1;
+    --pale-gold: #e6be8a;
+    --envy: #8dac9a;
+
+    /* TYPOGRAPHY */
+    --header-text: 'Poppins', sans-serif; 
+    --content-text: 'Roboto', sans-serif;
+
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,7 +28,7 @@ html {
 }
 
 body {
-    background: #cfdbc5 url('../images/hero-image-afrobeats1.webp') center center/cover no-repeat;
+    background: var(--earthy-green) url('../images/hero-image-afrobeats1.webp') center center/cover no-repeat;
     display: flex;
     flex-direction: column;
     font-family: 'poppins', sans-serif;
@@ -41,8 +58,8 @@ main {
 }
 
 #quiz-box {
-    background-color: #f2f2f1;
-    border: 1px solid #cfdbc5;
+    background-color: var(--off-white);
+    border: 1px solid var(--earthy-green);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -73,7 +90,7 @@ main {
 }
 
 .question-box h2 {
-    border-bottom: 1px solid #cfdbc5;
+    border-bottom: 1px solid var(--earthy-green);
     text-align: center;
 }
 
@@ -88,7 +105,7 @@ main {
 .option2, 
 .option3, 
 .option4 {
-    background-color: #cfdbc5;
+    background-color: var(--earthy-green);
     border-radius: 5px;
     margin: 0 0 10px;
     padding: 10px;
@@ -97,7 +114,7 @@ main {
 }
 
 .btn {
-    background-color: #89a670;
+    background-color: var(--Asparagus);
     border: none;
     border-radius: 5px;
     margin: auto;
@@ -197,7 +214,7 @@ and (orientation: portrait) {
 and (orientation: landscape) {
     
     #quiz-box {
-        border: 2px solid #cfdbc5;
+        border: 2px solid var(--earthy-green);
         margin: 20px 0 0 100px;
         width: 43%;
     }
@@ -218,7 +235,7 @@ and (orientation: landscape) {
 and (orientation: landscape) {
     
     #quiz-box {
-        border: 2px solid #cfdbc5;
+        border: 2px solid var(--earthy-green);
         margin: 12% 0 0 30%;
     }
 
@@ -229,7 +246,7 @@ and (orientation: landscape) {
 and (orientation: landscape) {
     
     #quiz-box {
-        border: 2px solid #cfdbc5;
+        border: 2px solid var(--earthy-green);
         margin: 23% 0 0 30%;
     }
 
@@ -240,7 +257,7 @@ and (orientation: landscape) {
 and (orientation: landscape) {
     
     #quiz-box {
-        border: 2px solid #cfdbc5;
+        border: 2px solid var(--earthy-green);
         margin: 25% 0 0 15%;
         width: 25%;
     }
@@ -252,7 +269,7 @@ and (orientation: landscape) {
 and (orientation: landscape) {
     
     #quiz-box {
-        border: 2px solid #cfdbc5;
+        border: 2px solid var(--earthy-green);
         margin: 25% 0 10% 15%;
         width: 30%;
     }
