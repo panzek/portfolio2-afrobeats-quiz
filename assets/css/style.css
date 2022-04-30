@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@100&display=swap'); */
+
 /* Global style */
 
 :root {
@@ -66,7 +68,7 @@ main {
     flex-direction: column;
     justify-content: center;
     padding: 10px;
-    margin-top: 85%;
+    margin: 85%;
     width: 85%;
 }
 
@@ -74,6 +76,7 @@ main {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    margin: 0 20px;
     text-align: center;
     width: 100%;
 }
@@ -107,16 +110,27 @@ main {
 .option4 {
     background-color: var(--earthy-green);
     border-radius: 5px;
+    cursor: pointer;
     margin: 0 0 10px;
     padding: 10px;
     text-align: center;
     width: 100%;
 }
 
+.option1:hover,
+.option2:hover,
+.option3:hover,
+.option4:hover {
+    background-color: var(--off-white);
+    border: 1px solid var(--Asparagus);
+    border-radius: 5px;
+}
+
 .btn {
     background-color: var(--Asparagus);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
     margin: auto;
     padding: 10px 10px;
     width: 200px; 
@@ -235,7 +249,6 @@ and (orientation: landscape) {
 and (orientation: landscape) {
     
     #quiz-box {
-        border: 2px solid var(--earthy-green);
         margin: 12% 0 0 30%;
     }
 
@@ -246,7 +259,6 @@ and (orientation: landscape) {
 and (orientation: landscape) {
     
     #quiz-box {
-        border: 2px solid var(--earthy-green);
         margin: 23% 0 0 30%;
     }
 
@@ -257,7 +269,6 @@ and (orientation: landscape) {
 and (orientation: landscape) {
     
     #quiz-box {
-        border: 2px solid var(--earthy-green);
         margin: 25% 0 0 15%;
         width: 25%;
     }
@@ -269,7 +280,6 @@ and (orientation: landscape) {
 and (orientation: landscape) {
     
     #quiz-box {
-        border: 2px solid var(--earthy-green);
         margin: 25% 0 10% 15%;
         width: 30%;
     }
