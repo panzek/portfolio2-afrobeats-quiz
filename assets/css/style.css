@@ -82,7 +82,7 @@ main {
 }
 
 .question-box {
-    border: none;
+    border-top: 1px solid var(--earthy-green);
     border-radius: 0 0 5px 5px;
     display: flex;
     align-items: flex-start;
