@@ -104,10 +104,10 @@ main {
     width: 100%;
 }
 
-.option1,
-.option2, 
-.option3, 
-.option4 {
+.quiz-options .option1,
+.quiz-options .option2, 
+.quiz-options .option3, 
+.quiz-options .option4 {
     background-color: var(--earthy-green);
     border-radius: 5px;
     cursor: pointer;
@@ -117,10 +117,10 @@ main {
     width: 100%;
 }
 
-.option1:hover,
-.option2:hover,
-.option3:hover,
-.option4:hover {
+.quiz-options .option1:hover,
+.quiz-options .option2:hover,
+.quiz-options .option3:hover,
+.quiz-options .option4:hover {
     background-color: var(--off-white);
     border: 1px solid var(--Asparagus);
     border-radius: 5px;

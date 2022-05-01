@@ -175,19 +175,20 @@ let questions = [
 document.addEventListener('DOMContentLoaded', function() {
     //get the question and options values from the DOM and store these values in variables
 
-    let currentQuestion = document.getElementById('question');
     
+    // let currentQuestion = document.getElementById('question');
+    let buttons = document.getElementsByClassName('btn');
+        for(let btn of buttons) {
+            console.log(btn.innerText)
 
-    // let option1 = document.getElementsByClassName('option1')[0].innerText;
-    // let option2 = document.getElementsByClassName('option2')[0].innerText;
-    // let option3 = document.getElementsByClassName('option3')[0].innerText;
-    // let option4 = document.getElementsByClassName('option4')[0].innerText;
-
-    // console.log(currentQuestion.innerText);
-    // console.log(option1);
-    // console.log(option2);
-    // console.log(option3);
-    // console.log(option4);
+            btn.addEventListener('click', function() {
+                if(btn.classList.contains('start-btn')) {
+                    console.log(`I am a start button`);
+                } else {
+                    console.log(`You clicked the wrong button`)
+                }
+            })
+        }
 
     startQuiz()
 
@@ -198,19 +199,14 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function startQuiz(){
 
-    let questionCounter = 0;
-    let score = 0;
-    let incorrectAnswer = 0;
-
-    let questions = [...questions];
+    let questions = document.getElementById('questions');
+    
+    let newQuestions = [...questions];
   
     let randomNum = Math.floor(Math.random() * questions.length);
-    let randomQuestion = questions[randomNum];
-    console.log(randomQuestion)
-    let currentQuestion = randomQuestion.question;
-    console.log(currentQuestion);
-    let correctAnswer = randomQuestion.rightAnswer;
-    console.log(correctAnswer);
+    let randomQuestion = newQuestions[randomNum];
+    console.log(randomQuestion);question.innerText = randomQuestion.question
+
 
     displayQuestion()
 }
