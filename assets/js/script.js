@@ -199,13 +199,13 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function startQuiz(){
 
-    let questions = document.getElementById('questions');
+    let question = document.getElementById('questions');
     
     let newQuestions = [...questions];
   
-    let randomNum = Math.floor(Math.random() * questions.length);
+    let randomNum = Math.floor(Math.random() * newQuestions.length);
     let randomQuestion = newQuestions[randomNum];
-    console.log(randomQuestion);question.innerText = randomQuestion.question
+    question.innerText = randomQuestion.question
 
 
     displayQuestion()
