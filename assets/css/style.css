@@ -89,6 +89,13 @@ main {
     width: 100%;
 }
 
+#question {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 4vh;
+}
+
 .question-box h2 {
     border-bottom: 1px solid var(--earthy-green);
     height: 50px;
