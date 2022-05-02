@@ -210,9 +210,9 @@ function startQuiz(){
     // display questions to the user
     let choices = document.getElementsByClassName('options');
 
-    for(let options of choices) {
-        options.dataset.value;
-        console.log(options.innerText = randomQuestion.rightAnswer);
+    for(let choice of choices) {
+        choice.dataset.value;
+        console.log(choice.innerText = randomQuestion.rightAnswer);
     }
 
 
