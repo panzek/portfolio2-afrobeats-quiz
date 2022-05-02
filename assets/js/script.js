@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(btn.innerText)
 
             btn.addEventListener('click', function() {
-                if(btn.classList.contains('start-btn')) {
+                if(btn.classList.contains('next-btn')) {
                     console.log(startQuiz());
                 } else {
                     console.log(`I am not a start button`)

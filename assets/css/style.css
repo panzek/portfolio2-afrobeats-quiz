@@ -119,11 +119,15 @@ main {
     border-radius: 5px;
 }
 
-.btn {
+.btn-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+.btn-wrapper .hide {
+    display: none;
 }
 
 button {
@@ -239,10 +243,10 @@ and (orientation: landscape) {
         margin-bottom: 10px;
     }   
 
-    .btn {
+    /* .btn {
         font-size: 1.5rem;
         font-weight: bolder;
-    }
+    } */
 
 }
 
