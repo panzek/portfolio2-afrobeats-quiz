@@ -1,4 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@100&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap'); */
 
 /* Global style */
 
@@ -151,8 +152,31 @@ button {
 
 /* footer */
 footer {
-    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: auto;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
 }
+
+#copyrights-socials {
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+}
+
+#copyrights-socials a {
+    color: #000;
+    text-decoration: none;
+}
+
+.font-sizing {
+    font-size: small;
+}
+
 
 
 /* Start of media queries section  */
