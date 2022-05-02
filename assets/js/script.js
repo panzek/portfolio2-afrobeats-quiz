@@ -175,17 +175,15 @@ let questions = [
 document.addEventListener('DOMContentLoaded', function() {
     //get the question and options values from the DOM and store these values in variables
 
-    
-    // let currentQuestion = document.getElementById('question');
     let buttons = document.getElementsByClassName('btn');
         for(let btn of buttons) {
             console.log(btn.innerText)
 
             btn.addEventListener('click', function() {
                 if(btn.classList.contains('start-btn')) {
-                    console.log(`I am a start button`);
+                    console.log(startQuiz());
                 } else {
-                    console.log(`You clicked the wrong button`)
+                    console.log(`I am not a start button`)
                 }
             })
         }
