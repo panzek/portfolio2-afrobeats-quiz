@@ -4,260 +4,262 @@ let questions = [
     {
         question: "Which Grammy award did Burna Boy win in 2021?",
         answers: 
-            [
-                "Song of the year Grammy", 
-                "Best rap song Grammy", 
-                "Album of the year Grammy", 
-                "Global Music album Grammy"
-            ],
+            {
+                option1: "Song of the year Grammy", 
+                option2: "Best rap song Grammy", 
+                option3: "Album of the year Grammy", 
+                option4: "Global Music album Grammy"
+            },
         rightAnswer: "4"
     },
     
     {
         question: "Which artist released the major breakout song 'Dumebi' from his self-titled EP in 2019?",
         answers: 
-            [
-                "Adekunle Gold", 
-                "Naira Marley", 
-                "Rema", 
-                "Mayorkun"
-            ],
+            {
+                option1: "Adekunle Gold", 
+                option2: "Naira Marley", 
+                option3: "Rema", 
+                option4: "Mayorkun"
+            },
         rightAnswer: "3"
     },
 
     {
         question: "Which artist won the Grammy award for 'Global Music Album' in 2022?",
         answers: 
-            [
-                "Burna Boy", 
-                "Wizkid", 
-                "Angélique Kidjo", 
-                "Wande Coal"
-            ],
+            {
+                option1: "Burna Boy", 
+                option2: "Wizkid", 
+                option3: "Angélique Kidjo", 
+                option4: "Wande Coal"
+            },
         rightAnswer: "3"
     },
 
     {
         question: "Which Artist released the song 'Eloko Oyo' in 2017?",
         answers: 
-            [
-                "Fally Ipupa", 
-                "Koffi Olomide", 
-                "Awilo Longomba", 
-                "Innoss B"
-            ],
+            {
+                option1: "Fally Ipupa", 
+                option2: "Koffi Olomide", 
+                option3: "Awilo Longomba", 
+                option4: "Innoss B"
+            },
         rightAnswer: "1"
     },
 
     {
         question: "Davido founded the record label DMW in 2016. What does DMW stand for?",
         answers: 
-            [
-                "Dance Masters Worldwide", 
-                "Davido Music Worldwide", 
-                "Davido's Media Wins", 
-                "Davido Millions Works"
-            ],
+            {
+                option1: "Dance Masters Worldwide", 
+                option2: "Davido Music Worldwide", 
+                option3: "Davido's Media Wins", 
+                option4: "Davido Millions Works"
+            },
         rightAnswer: "2"
     },
 
     {
         question: "Which artist won the Grammy award for 'Best Music Video' in 2021?",
         answers: 
-            [
-                "Wizkid", 
-                "Sikiru Adepoju", 
-                "Chamillionaire", 
-                "Burna Boy"
-            ],
+            {
+                option1: "Wizkid", 
+                option2: "Sikiru Adepoju", 
+                option3: "Chamillionaire", 
+                option4: "Burna Boy"
+            },
         rightAnswer: "1"
     },
     
     {
         question: "Where did Afrobeats music originate?",
         answers: 
-            [
-                "Nigeria", 
-                "South Africa", 
-                "Ghana", 
-                "A and C"
-            ],
+            {
+                option1: "Nigeria", 
+                option2: "South Africa", 
+                option3: "Ghana", 
+                option4: "A and C"
+            },
         rightAnswer: "4"
     },
     
     {
         question: "Finish the lyrics from Whizkid (ft. Tems) Essence: 'Time is of the essence, I tried to teach you…'",
         answers: 
-            [
-                "…But you don't want to listen.", 
-                "…But I might need some lessons.", 
-                "…But I have a confession.", 
-                "…But there is some resistance."
-            ],
+            {
+                option1: "…But you don't want to listen.", 
+                option2: "…But I might need some lessons.", 
+                option3: "…But I have a confession.", 
+                option4: "…But there is some resistance."
+            },
         rightAnswer: "2"
     },
 
     {
         question: "Who is the Nigerian composer, multi-instrumentalist, and politician activist known as the 'Pioneer of Afrobeats'?",
         answers: 
-            [
-                "Fela Anikulapo-Kuti.", 
-                "Mulatu Astake.", 
-                "Salif Keita.", 
-                "Manu Dibangu."
-            ],
+            {
+                option1: "Fela Anikulapo-Kuti.", 
+                option2: "Mulatu Astake.", 
+                option3: "Salif Keita.", 
+                option4: "Manu Dibangu."
+            },
         rightAnswer: "1"
     },
 
     {
         question: "In the song 'Kumama Papa' what does 'Azalaka Kisi ya soni' translate to?",
         answers: 
-            [
-                "He is with me.", 
-                "He has shown me mercy.", 
-                "He is the medicine for shame.", 
-                "He will show me the way."
-            ],
+            {
+                option1: "He is with me.", 
+                option2: "He has shown me mercy.", 
+                option3: "He is the medicine for shame.", 
+                option4: "He will show me the way."
+            },
         rightAnswer: "3"
     },
 
     {
         question: "In the name 'Zlatan Ibile' what does Ibile translate to?",
         answers: 
-            [
-                "Great.", 
-                "Local.", 
-                "Favourite.", 
-                "Special."
-            ],
+            {
+                option1: "Great.", 
+                option2: "Local.", 
+                option3: "Favourite.", 
+                option4: "Special."
+            },
         rightAnswer: "2"
     },
 
     {
         question: "Which central African artist is nicknamed 'Dicap La marveille'?",
         answers: 
-            [
-                "Koffi Olomide.", 
-                "Fally Ipupa.", 
-                "Diamond Platinumz.", 
-                "Burna Boy."
-            ],
+            {
+                option1: "Koffi Olomide.", 
+                option2: "Fally Ipupa.", 
+                option3: "Diamond Platinumz.", 
+                option4: "Burna Boy."
+            },
         rightAnswer: "2"
     },
 
     {
         question: "What does Amapiano in the song 'Ameno Amapiano' by Goya Menor, Nektunez mean?",
         answers: 
-            [
-                "The pianos.", 
-                "The singers.", 
-                "The runners.", 
-                "The artist."
-            ],
+            {
+                option1: "The pianos.", 
+                option2: "The singers.", 
+                option3: "The runners.", 
+                option4: "The artist."
+            },
         rightAnswer: "1"
     },
  
     {
         question: "In April 2022, what was the most shazammed song in the world?",
         answers: 
-            [
-                "Kwaku the Traveller.", 
-                "Don't call me.", 
-                "Sungba.", 
-                "The Best."
-            ],
+            {
+                option1: "Kwaku the Traveller.", 
+                option2: "Don't call me.", 
+                option3: "Sungba.", 
+                option4: "The Best."
+            },
         rightAnswer: "1"
     },
 
     {
         question: "What genre does the song 'Jerusalema' by Master KG fall under?",
         answers: 
-            [
-                "Hip hop.", 
-                "Rock.", 
-                "Gospel-house.", 
-                "Pop."
-            ],
+            {
+                option1: "Hip hop.", 
+                option2: "Rock.", 
+                option3: "Gospel-house.", 
+                option4: "Pop."
+            },
         rightAnswer: "3"
     },
 
     {
         question: "What is the Ghanaian artist Shatta Wale's real name?",
         answers: 
-            [
-                "Charles Nii Armah Mensah Jr.", 
-                "Ayodeji Ibrahim Balogun.", 
-                "Damini Ebunoluwa Ogulu.", 
-                "Oluwatosin Oluwole Ajibade."
-            ],
+            {
+                option1: "Charles Nii Armah Mensah Jr.", 
+                option2: "Ayodeji Ibrahim Balogun.", 
+                option3: "Damini Ebunoluwa Ogulu.", 
+                option4: "Oluwatosin Oluwole Ajibade."
+            },
         rightAnswer: "1"
     },
 
     {
         question: "The afrobeat song 'Jinja' was created by which artist?",
         answers: 
-            [
-                "Zinoleesky.", 
-                "Rahman Jago.", 
-                "Barry Jay.", 
-                "Tekno."
-            ],
+            {
+                option1: "Zinoleesky.", 
+                option2: "Rahman Jago.", 
+                option3: "Barry Jay.", 
+                option4: "Tekno."
+            },
         rightAnswer: "4"
     },
 
     {
         question: "Which Irish African artist released the latest single 'Truth Be Told'",
         answers: 
-            [
-                "Plantain Papi.", 
-                "Nonzus Magnus.", 
-                "Offica.", 
-                "Andre Faz."
-            ],
+            {
+                option1: "Plantain Papi.", 
+                option2: "Nonzus Magnus.", 
+                option3: "Offica.", 
+                option4: "Andre Faz."
+            },
         rightAnswer: "2"
     },
 
     {
         question: "The song 'ZaZoo Zehh' is by?",
         answers: 
-            [
-                "Portable.", 
-                "Poco Lee and Olamide Ft. Portable.", 
-                "Portable and Poco Lee Ft. Olamide.", 
-                "Portable and Olamide Ft. Poco Lee."
-            ],
+            {
+                option1: "Portable.", 
+                option2: "Poco Lee and Olamide Ft. Portable.", 
+                option3: "Portable and Poco Lee Ft. Olamide.", 
+                option4: "Portable and Olamide Ft. Poco Lee."
+            },
         rightAnswer: "3"
     },
 
     {
         question: "Don't 'Rush' is by this UK Afrobeats artist?",
         answers: 
-            [
-                "Young T & Bugsey.", 
-                "J Hus.", 
-                "Nonzus Magnus.", 
-                "Kojo Funds."
-            ],
+            {
+                option1: "Young T & Bugsey.", 
+                option2: "J Hus.", 
+                option3: "Nonzus Magnus.", 
+                option4: "Kojo Funds."
+            },
         rightAnswer: "1"
     },
 
     {
         question: "The song Azonto is by?",
         answers: 
-            [
-                "Not3s.", 
-                "Fuse ODG.", 
-                "Yxng Bane.", 
-                "Juls."
-            ],
+            {
+                option1: "Not3s.", 
+                option2: "Fuse ODG.", 
+                option3: "Yxng Bane.", 
+                option4: "Juls."
+            },
         rightAnswer: "2"
     }
 ]
 
-
 document.addEventListener('DOMContentLoaded', function() {
     //get the question and options values from the DOM and store these values in variables
 
+    const MAX_QUESTIONS = questions.length;
+    console.log(MAX_QUESTIONS)
+    
     // let newQuestions = 0;
     let question = document.getElementById('question');
     let choices = document.getElementsByClassName('options');
@@ -280,8 +282,10 @@ document.addEventListener('DOMContentLoaded', function() {
  * start the quiz on user click of the start button after creating username
  */
  function startQuiz() {
+
+    questionCounter = 0;
     score = 0;
-    newQuestions = [...questions];
+    questions = [...questions];
 
     displayQuestion();
 }
@@ -292,19 +296,35 @@ document.addEventListener('DOMContentLoaded', function() {
 */
 function displayQuestion() {
 
-    let randomIndex = Math.floor(Math.random() * newQuestions.length);
-    let randomQuestion = newQuestions[randomIndex];
-    question.innerText = randomQuestion.question;
+    // let questionCounter = document.getElementById('question-counter')
+    // progressBar.innerHTML = `${questionCounter} of ${MAX_QUESTIONS}`;
 
-     // display questions to the user
+    let randomIndex = Math.floor(Math.random() * questions.length);
+    let randomQuestion = questions[randomIndex];
+    question.innerHTML = randomQuestion.question;
+    console.log(question.innerHTML)
+
+    let correctAnswer = randomQuestion.rightAnswer
+    console.log(correctAnswer);
+
+
+    //  display questions to the user
     for(let choice of choices) {
         
-        let optionsValue = choice.dataset.value;
-        choice.innerText = randomQuestion.answers[optionsValue];
+        let optionsValue = choice.getAttribute('data-value');
+        choice.innerHTML = randomQuestion.answers['option' + optionsValue];
+        console.log(choice.innerHTML)
 
         //prevent question repeat
-        newQuestions.splice(randomIndex, 1);
+        questions.splice(randomIndex, 1);
 
+        //check answers
+        choice.addEventListener('click', event => {
+            
+            let selectedOption = event.target;
+            
+        })
+        
         checkAnswer();
      }
 
