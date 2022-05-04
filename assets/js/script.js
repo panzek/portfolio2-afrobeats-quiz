@@ -260,7 +260,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const MAX_QUESTIONS = questions.length;
     // console.log(MAX_QUESTIONS);
     
-    // let newQuestions = 0;
+    let acceptAnswers;
+
+    let newQuestions = 0;
     let question = document.getElementById('question');
     let choices = document.getElementsByClassName('options');
 
@@ -270,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             btn.addEventListener('click', function() {
                 if(btn.classList.contains('next-btn')) {
-                    displayQuestion();
+                    startQuiz();
                 } else {
                     console.log(`I am not a next button`);
                 }
@@ -286,6 +288,7 @@ document.addEventListener('DOMContentLoaded', function() {
     questionCounter = 0;
     score = 0;
     questions = [...questions];
+    acceptAnswers = true;
 
     displayQuestion();
 }
@@ -331,20 +334,33 @@ function checkAnswer(choice, correctAnswer) {
 
     //checking answers
     choice.addEventListener('click', event => {
-            
+        
+        if (!acceptAnswers) {
+            return;
+        };
+
+        acceptAnswers = false;
+
         let userAnswer = event.target;
         let selectedAnswer = userAnswer.dataset.value;
 
         if(selectedAnswer === correctAnswer) {
-            choice.classList.add('correct');
+            console.log('correct answer', selectedAnswer)
+            choice.classList.add('correct')
+     
             score++
+
         } else {
             choice.classList.add('incorrect');
-
-            window.setTimeout('checkAnswer()', 10000);
-        
         }
+
+        setTimeout( () => {
+            // choice.classList.remove('incorrect', 'correct');
+            acceptAnswers = true;
+            nextQuestion(choice);
+        }, 1000)
         
+       
     })
 
 }
@@ -353,7 +369,12 @@ function checkAnswer(choice, correctAnswer) {
  * check user selected value and the correct answer
  * and apply background color specific to correct and incorrect answers 
  */
- function selectAnswer() {
+ function nextQuestion(choice) {
+    newQuestions++;
+ console.log('I am next question function');
+ if(btn) {
+    choice.classList.remove('incorrect', 'correct');
+}
 
 }
 

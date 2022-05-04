@@ -127,11 +127,11 @@ main {
     width: 100%;
 }
 
-.options:hover {
+/* .options:hover {
     background-color: var(--off-white);
     border: 1px solid var(--Asparagus);
     border-radius: 5px;
-}
+} */
 
 .btn-wrapper {
     display: flex;
