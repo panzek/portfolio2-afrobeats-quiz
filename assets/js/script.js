@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //get the question and options values from the DOM and store these values in variables
 
     const MAX_QUESTIONS = questions.length;
-    console.log(MAX_QUESTIONS)
+    // console.log(MAX_QUESTIONS);
     
     // let newQuestions = 0;
     let question = document.getElementById('question');
@@ -305,7 +305,7 @@ function displayQuestion() {
     console.log(question.innerHTML)
 
     let correctAnswer = randomQuestion.rightAnswer
-    console.log(correctAnswer);
+    console.log('correct Answer is:', correctAnswer);
 
 
     //  display questions to the user
@@ -317,16 +317,35 @@ function displayQuestion() {
 
         //prevent question repeat
         questions.splice(randomIndex, 1);
-
-        //check answers
-        choice.addEventListener('click', event => {
-            
-            let selectedOption = event.target;
-            
-        })
         
-        checkAnswer();
+        checkAnswer(choice, correctAnswer);
      }
+
+}
+
+/**
+ * Checks the user's selected answer and the correct answer
+ */
+function checkAnswer(choice, correctAnswer) {
+    console.log(correctAnswer);
+
+    //checking answers
+    choice.addEventListener('click', event => {
+            
+        let userAnswer = event.target;
+        let selectedAnswer = userAnswer.dataset.value;
+
+        if(selectedAnswer === correctAnswer) {
+            choice.classList.add('correct');
+            score++
+        } else {
+            choice.classList.add('incorrect');
+
+            window.setTimeout('checkAnswer()', 10000);
+        
+        }
+        
+    })
 
 }
 
@@ -334,14 +353,7 @@ function displayQuestion() {
  * check user selected value and the correct answer
  * and apply background color specific to correct and incorrect answers 
  */
-function selectAnswer() {
-
-}
-
-/**
- * Checks the user's selected answer and the correct answer
- */
-function checkAnswer() {
+ function selectAnswer() {
 
 }
 
