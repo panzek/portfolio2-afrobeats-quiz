@@ -162,6 +162,7 @@ main {
     text-align: center;
 }
 
+#question-counter,
 #incorrect-score, 
 #scores {
     font-weight: bold;

@@ -258,10 +258,12 @@ document.addEventListener('DOMContentLoaded', function() {
     //get the question and options values from the DOM and store these values in variables
 
     let acceptAnswers;
+    let maxQuestions = 10;
 
     let newQuestions = 0;
     let question = document.getElementById('question');
     let choices = document.getElementsByClassName('options');
+    let questionCounter = document.getElementById('question-counter');
 
     let buttons = document.getElementsByClassName('btn');
         for(let btn of buttons) {
@@ -343,10 +345,11 @@ function checkAnswer(choice, correctAnswer) {
 
         setTimeout( () => {
             choice.classList.remove('incorrect', 'correct');
-            
         }, 2000)
         
         nextQuestion();
+        questionCount();
+        
     })
 
 }
@@ -356,7 +359,7 @@ function checkAnswer(choice, correctAnswer) {
  * and apply background color specific to correct and incorrect answers 
  */
  function nextQuestion() {
-    newQuestions++;
+    // questionCount++;
  //startQuiz(); //calling this function here calls the next question automatically
 }
 
@@ -368,7 +371,7 @@ function incrementScore() {
 
     let score = document.getElementById('scores').innerText;
     document.getElementById('scores').innerText = ++score;
-    console.log(score);
+    console.log('Correct Score', score);
 
 }
 
@@ -380,7 +383,20 @@ function incrementWrongAnswer() {
 
     let incorrectScore = document.getElementById('incorrect-score').innerText;
     document.getElementById('incorrect-score').innerText = ++incorrectScore;
-    console.log(incorrectScore);
+    console.log('Incorrect Score', incorrectScore);
+}
+
+/**
+ * Keeps tract of question counter and
+ * increment the question count for each question answered by the user
+ */
+ function questionCount() {
+    
+    questionCounter++
+    document.getElementById('question-counter').innerText = `Question ${questionCounter} / ${maxQuestions}`;
+
+    console.log('here', questionCounter);
+
 }
 
 startQuiz()
