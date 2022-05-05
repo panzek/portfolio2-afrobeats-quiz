@@ -17,21 +17,25 @@
     <main>
         <div class="quiz-container">
             <div id="quiz-box">
+                <div id="progress-bar">
+                    <div>
+                        <p id="question-counter">Question 0/10</p>
+                    </div>
+                    <div>
+                        <p id="progress">Progressive Bar</p>
+                    </div>
+                </div>
                 <div class="quiz-header">
                     <div id="progress-bar">
-                        <div d="question-counter">
-                            <p>Question 0/10</p>
-                        </div>
                         <div>
-                            <p id="progress">Progressive Bar</p>
+                            <span>Incorrect:</span>
+                            <span id="incorrect-score">0</span>
                         </div>
                     </div>
-                    <div class="scores">
+                    <div >
                         <div>
-                            <p>Score</p>
-                        </div>
-                        <div>
-                            <p>0</p>
+                            <span>Score:</span>
+                            <span id="scores">0</span>
                         </div>
                     </div>
                 </div>

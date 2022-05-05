@@ -276,7 +276,6 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         }
 
- 
 /**
  * start the quiz on user click of the start button after creating username
  */
@@ -309,7 +308,6 @@ function displayQuestion() {
         
         let optionsValue = choice.getAttribute('data-value');
         choice.innerHTML = randomQuestion.answers['option' + optionsValue];
-        console.log(choice.innerHTML)
 
         //prevent question repeat
         questions.splice(randomIndex, 1);
@@ -322,11 +320,8 @@ function displayQuestion() {
  * Checks the user's selected answer and the correct answer
  */
 function checkAnswer(choice, correctAnswer) {
-    console.log(correctAnswer);
 
-    //checking answers
     choice.addEventListener('click', event => {
-        
         if (!acceptAnswers) {
             return;
         };
@@ -339,15 +334,16 @@ function checkAnswer(choice, correctAnswer) {
         if(selectedAnswer === correctAnswer) {
             console.log('correct answer', selectedAnswer)
             choice.classList.add('correct')
-     
-            score++
+            incrementScore();
 
         } else {
             choice.classList.add('incorrect');
+            incrementWrongAnswer()
         }
 
         setTimeout( () => {
             choice.classList.remove('incorrect', 'correct');
+            
         }, 2000)
         
         nextQuestion();
@@ -368,16 +364,23 @@ function checkAnswer(choice, correctAnswer) {
  * Keeps track of user's score and 
  * increment the score count if the answer is correct
  */
-function increaseScore() {
+function incrementScore() {
+
+    let score = document.getElementById('scores').innerText;
+    document.getElementById('scores').innerText = ++score;
+    console.log(score);
 
 }
 
-
 /**
+ * Keeps track of user's score and
  * increment the score count if the answer is incorrect
  */
 function incrementWrongAnswer() {
 
+    let incorrectScore = document.getElementById('incorrect-score').innerText;
+    document.getElementById('incorrect-score').innerText = ++incorrectScore;
+    console.log(incorrectScore);
 }
 
 startQuiz()

@@ -105,6 +105,11 @@ main {
     text-align: center;
 }
 
+#incorrect-score, 
+#scores {
+    font-weight: bold;
+}
+
 /* Buttons */
 
 .quiz-options {
