@@ -1,5 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@100&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
 /* Global style */
 
@@ -40,17 +40,11 @@ html {
 }
 
 body {
-    aspect-ratio: 3/1;
-    
     display: flex;
     flex-direction: column;
     font-family: 'poppins', sans-serif;
     font-size: 16px;
-    margin: 0 auto;
     min-height: 100%;
-    position: sticky;
-    height: 100vh;
-    width: 100vw;
 }
 
 /* Heading */
@@ -81,9 +75,9 @@ header {
 }
 
 .navbar ul {
+    align-items: center;
     display: flex;
     text-align: center;
-    width: 120%;
 }
 
 .navbar li {
@@ -91,7 +85,6 @@ header {
     font-size: 1rem;
     list-style: none;
     margin: 0.5em;
-    width: 190%;
 }
 
 .navbar a:hover {
@@ -107,7 +100,6 @@ header {
 }
 
 .navbar li.active > a {
-    /* background-color: var(--#913831); */
     border-radius: 10px;
     color: inherit;
     padding: 1px 15px;
@@ -122,19 +114,20 @@ main {
     aspect-ratio: 1/1;
     background: var(--earthy-green) url('../images/hero-image-afrobeats2.webp') center center/cover no-repeat;
     margin-top: 0;
-    min-width: 100%;
+    width: 100%;
     position: absolute;
 }
 
 /* Quiz area */
 
 .quiz-container {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 100%;
+    margin-top: 20px;
     position: relative;
+    width: 100%;
 }
 
 #quiz-box {
@@ -146,33 +139,32 @@ main {
     flex-direction: column;
     justify-content: center;
     padding: 10px;
-    margin: 85%;
     width: 85%;
 }
 
 .quiz-header {
     align-items: center;
     display: flex;
-    justify-content: space-between;
-    margin: 10px 20px;
+    justify-content: space-around;
     text-align: center;
     width: 100%;
 }
 
 .question-box {
     border-radius: 0 0 5px 5px;
-    border-top: 1px solid var(--earthy-green);
-    margin-top: 5px;
+    border-bottom: 1px solid var(--earthy-green);
     padding: 10px;
-    width: 100%;
+    width: 90%;
 }
 
 #question {
-    display: flex;
-    justify-content: flex-start;
     align-items: center;
+    background-color: var(--Asparagus);
+    display: flex;
     font-size: 1.4rem;
     font-weight: bolder;
+    justify-content: center;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -251,7 +243,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: auto;
+    /* margin: auto; */
     padding: 20px 0;
     text-align: center;
     width: 100%;
@@ -272,61 +264,48 @@ footer {
     font-size: small;
 }
 
-
-/* Start of media queries section  */
-
-/* Portrait */
-/* Screen sizes equal to or larger than 280px wide */
-@media screen and (min-width: 280px) 
-and (orientation: portrait) {
-    
-    #quiz-box {
-        margin-top: 20%;
-    }
+#social-networks {
+    margin: 10px;
+    text-align: center;
 }
 
-/* Screen sizes equal to or larger than 360px wide */
-@media screen and (min-width: 360px) 
-and (orientation: portrait) {
-    
-    #quiz-box {
-        margin-top: 50%;
-    }
+#social-networks li {
+    display: inline-block;
+    text-align: center;
+    width: 100px;
 }
 
-/* Screen sizes equal to or larger than 375px wide */
-@media screen and (min-width: 375px) 
-and (orientation: portrait) {
-    
-    #quiz-box {
-        margin-top: 30%;
-    }
+#social-networks a {
+    color: #000;
+    display: block;
+    text-decoration: none;
 }
 
-/* Screen sizes equal to or larger than 390px wide */
-@media screen and (min-width: 390px) 
-and (orientation: portrait) {
-    
-    #quiz-box {
-        margin-top: 75%;
-    }
-}
+/* footer ends  */
 
-/* Screen sizes equal to or larger than 412px wide */
-@media screen and (min-width: 412px) 
+/* Screen sizes equal to or larger than 560px wide */
+@media screen and (min-width: 560px) 
 and (orientation: portrait) {
-    
-    #quiz-box {
-        margin-top: 85%;
-    }
-}
 
-/* Screen sizes equal to or larger than 540px wide */
-@media screen and (min-width: 540px) 
-and (orientation: portrait) {
+    .question-box {
+        border-radius: 0 0 5px 5px;
+        border-bottom: 1px solid var(--earthy-green);
+        padding: 10px;
+        width: 90%;
+    }
+    
+    #question {
+        align-items: center;
+        background-color: var(--Asparagus);
+        display: flex;
+        font-size: 1.4rem;
+        font-weight: bolder;
+        justify-content: flex-start;
+        padding: 1rem;
+        text-align: center;
+    }
     
     #quiz-box {
-        margin-top: 35%;
         width: 85%;
     }
 }
@@ -338,20 +317,11 @@ and (orientation: portrait) {
 and (orientation: portrait) {
     
     #hero-image {
-        /* aspect-ratio: 7/3; */
-        background: var(--earthy-green) url('../images/hero-image-afrobeats1.webp') center center/cover no-repeat;
+        aspect-ratio: 1/1;
+        background: var(--earthy-green) url('../images/hero-image-afrobeats2.webp') center center/cover no-repeat;
         margin-top: 0;
-        min-width: 100%;
+        width: 100%;
         position: absolute;
-    }
-}
-
-/* Screen sizes equal to or larger than 912px wide */
-@media screen and (min-width: 912px) 
-and (orientation: portrait) {
-    
-    #quiz-box {
-        margin: 50% 0 0 0;
     }
 }
 
@@ -363,13 +333,8 @@ and (orientation: landscape) {
     
     #quiz-box {
         border: 2px solid var(--earthy-green);
-        margin: 20px 0 0 100px;
         width: 43%;
     }
-
-    .question-box h2 {
-        margin-bottom: 10px;
-    }   
 
 }
 
@@ -378,37 +343,16 @@ and (orientation: landscape) {
 and (orientation: landscape) {
     
     #hero-image {
-        aspect-ratio: 7/3;
+        aspect-ratio: 8/3;
         background: var(--earthy-green) url('../images/hero-image-afrobeats1.webp') center center/cover no-repeat;
         margin-top: 0;
-        min-width: 100%;
+       width: 100%;
         position: absolute;
     }
 
     #quiz-box {
-        margin: 12% 0 0 30%;
-    }
-
-}
-
-/* Screen sizes equal to or larger than 1280px wide */
-@media screen and (min-width: 1280px) 
-and (orientation: landscape) {
-    
-    #quiz-box {
-        margin: 23% 0 0 30%;
-    }
-
-}
-
-/* Screen sizes equal to or larger than 1440px wide */
-@media screen and (min-width: 1360px) 
-and (orientation: landscape) {
-    
-    #quiz-box {
-        margin: 17% 0 0 15%;
-        width: 47%;
-    }
+        margin: 19% 0 0 0;
+    }   
 
 }
 
