@@ -36,7 +36,11 @@ body {
     flex-direction: column;
     font-family: 'poppins', sans-serif;
     font-size: 16px;
+    margin: 0 auto;
     min-height: 100%;
+    position: sticky;
+    height: 100vh;
+    width: 100vw;
 }
 
 /* Heading */
@@ -44,6 +48,59 @@ body {
 h1 {
     text-align: center;
     margin-top: 10px 
+}
+
+header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;    
+    flex-wrap: nowrap;
+    justify-content: space-between;    
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* logo */
+#logo {
+    color: #000;
+    letter-spacing: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar ul {
+    display: flex;
+    text-align: center;
+    width: 120%;
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 1rem;
+    list-style: none;
+    margin: 0.5em;
+    width: 190%;
+}
+
+.navbar a:hover {
+    background-color: green;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: var(--off-white);
+}
+
+.navbar a {
+    color: #000;
+    text-decoration: none;
+}
+
+.navbar li.active > a {
+    /* background-color: var(--#913831); */
+    border-radius: 10px;
+    color: inherit;
+    padding: 1px 15px;
 }
 
 main {
@@ -131,12 +188,6 @@ main {
     height: 5vh;
     width: 100%;
 }
-
-/* .options:hover {
-    background-color: var(--off-white);
-    border: 1px solid var(--Asparagus);
-    border-radius: 5px;
-} */
 
 .btn-wrapper {
     display: flex;
@@ -263,14 +314,14 @@ and (orientation: portrait) {
 
 /* Tablets */
 /* Screen sizes equal to or larger than 768px wide */
-@media screen and (min-width: 768px) 
+/* @media screen and (min-width: 768px) 
 and (orientation: portrait) {
     
     #quiz-box {
         margin: 50% 0 0 20%;
         width: 43%;
     }
-}
+} */
 
 /* Screen sizes equal to or larger than 912px wide */
 @media screen and (min-width: 912px) 
@@ -296,11 +347,6 @@ and (orientation: landscape) {
     .question-box h2 {
         margin-bottom: 10px;
     }   
-
-    /* .btn {
-        font-size: 1.5rem;
-        font-weight: bolder;
-    } */
 
 }
 
@@ -329,8 +375,8 @@ and (orientation: landscape) {
 and (orientation: landscape) {
     
     #quiz-box {
-        margin: 25% 0 0 15%;
-        width: 25%;
+        margin: 17% 0 0 15%;
+        width: 47%;
     }
 
 }
