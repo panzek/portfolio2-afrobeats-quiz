@@ -57,9 +57,10 @@ h1 {
 header {
     align-items: center;
     display: flex;
-    flex-direction: column;    
-    flex-wrap: nowrap;
-    justify-content: space-between;    
+    flex-direction: row;    
+    flex-wrap: wrap;
+    justify-content: space-evenly;  
+    margin: 10px 0;  
     position: sticky;
     top: 0;
     width: 100%;
@@ -87,22 +88,23 @@ header {
     margin: 0.5em;
 }
 
-.navbar a:hover {
-    background-color: green;
-    border-radius: 10px;
-    padding: 10px 20px;
-    color: var(--off-white);
-}
-
 .navbar a {
     color: #000;
     text-decoration: none;
 }
 
 .navbar li.active > a {
-    border-radius: 10px;
-    color: inherit;
-    padding: 1px 15px;
+    /* border-radius: 10px; */
+    /* color: #000; */
+    text-decoration: underline;
+    /* padding: 1px 15px; */
+}
+
+.navbar a:hover {
+    background-color: var(--red-ochre);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: var(--off-white);
 }
 
 main {
@@ -244,7 +246,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* margin: auto; */
     padding: 20px 0;
     text-align: center;
     width: 100%;
@@ -253,7 +254,7 @@ footer {
 #copyrights-socials {
     display: flex;
     justify-content: space-around;
-    width: 10%;
+    width: 15%;
 }
 
 #copyrights-socials a {
@@ -318,7 +319,7 @@ and (orientation: portrait) {
 and (orientation: portrait) {
     
     #hero-image {
-        aspect-ratio: 1/1;
+        aspect-ratio: 3/1;
         background: var(--earthy-green) url('../images/hero-image-afrobeats2.webp') center center/cover no-repeat;
         margin-top: 0;
         width: 100%;
@@ -344,7 +345,7 @@ and (orientation: landscape) {
 and (orientation: landscape) {
     
     #hero-image {
-        aspect-ratio: 8/3;
+        aspect-ratio: 5/2;
         background: var(--earthy-green) url('../images/hero-image-afrobeats1.webp') center center/cover no-repeat;
         margin-top: 0;
         width: 100%;
