@@ -257,9 +257,6 @@ let questions = [
 document.addEventListener('DOMContentLoaded', function() {
     //get the question and options values from the DOM and store these values in variables
 
-    const MAX_QUESTIONS = questions.length;
-    // console.log(MAX_QUESTIONS);
-    
     let acceptAnswers;
 
     let newQuestions = 0;
@@ -299,9 +296,6 @@ document.addEventListener('DOMContentLoaded', function() {
 */
 function displayQuestion() {
 
-    // let questionCounter = document.getElementById('question-counter')
-    // progressBar.innerHTML = `${questionCounter} of ${MAX_QUESTIONS}`;
-
     let randomIndex = Math.floor(Math.random() * questions.length);
     let randomQuestion = questions[randomIndex];
     question.innerHTML = randomQuestion.question;
@@ -309,7 +303,6 @@ function displayQuestion() {
 
     let correctAnswer = randomQuestion.rightAnswer
     console.log('correct Answer is:', correctAnswer);
-
 
     //  display questions to the user
     for(let choice of choices) {
@@ -323,7 +316,6 @@ function displayQuestion() {
         
         checkAnswer(choice, correctAnswer);
      }
-
 }
 
 /**
@@ -355,12 +347,10 @@ function checkAnswer(choice, correctAnswer) {
         }
 
         setTimeout( () => {
-            // choice.classList.remove('incorrect', 'correct');
-            acceptAnswers = true;
-            nextQuestion(choice);
-        }, 1000)
+            choice.classList.remove('incorrect', 'correct');
+        }, 2000)
         
-       
+        nextQuestion();
     })
 
 }
@@ -369,13 +359,9 @@ function checkAnswer(choice, correctAnswer) {
  * check user selected value and the correct answer
  * and apply background color specific to correct and incorrect answers 
  */
- function nextQuestion(choice) {
+ function nextQuestion() {
     newQuestions++;
- console.log('I am next question function');
- if(btn) {
-    choice.classList.remove('incorrect', 'correct');
-}
-
+ //startQuiz(); //calling this function here calls the next question automatically
 }
 
 /**
