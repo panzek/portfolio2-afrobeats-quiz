@@ -132,8 +132,8 @@ main {
 
 #quiz-box {
     background-color: var(--off-white);
-    border: 1px solid var(--earthy-green);
-    border-radius: 10px;
+    border: 1px solid var(--Asparagus);
+    border-radius: 10px 10px 0 0;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -153,13 +153,13 @@ main {
 .question-box {
     border-radius: 0 0 5px 5px;
     border-bottom: 1px solid var(--earthy-green);
-    padding: 10px;
     width: 90%;
 }
 
 #question {
     align-items: center;
     background-color: var(--Asparagus);
+    border-radius: 10px 10px 0 0;
     display: flex;
     font-size: 1.4rem;
     font-weight: bolder;
@@ -202,9 +202,10 @@ main {
 }
 
 .btn-wrapper {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 2rem;
     width: 100%;
 }
 
@@ -332,7 +333,7 @@ and (orientation: portrait) {
 and (orientation: landscape) {
     
     #quiz-box {
-        border: 2px solid var(--earthy-green);
+        /* border: 2px solid var(--earthy-green); */
         width: 43%;
     }
 
@@ -346,13 +347,25 @@ and (orientation: landscape) {
         aspect-ratio: 8/3;
         background: var(--earthy-green) url('../images/hero-image-afrobeats1.webp') center center/cover no-repeat;
         margin-top: 0;
-       width: 100%;
+        width: 100%;
         position: absolute;
+    }
+
+    .quiz-container {
+        margin-top: none;
     }
 
     #quiz-box {
         margin: 19% 0 0 0;
     }   
+
+    .question-box {
+        width: 50%;
+    }
+    
+    #question {
+        font-size: 1.8rem;
+}
 
 }
 
