@@ -345,7 +345,7 @@ function checkAnswer(choice, correctAnswer) {
 
         setTimeout( () => {
             choice.classList.remove('incorrect', 'correct');
-        }, 2000)
+        }, 1000)
         
         nextQuestion();
         questionCount();
@@ -359,7 +359,6 @@ function checkAnswer(choice, correctAnswer) {
  * and apply background color specific to correct and incorrect answers 
  */
  function nextQuestion() {
-    // questionCount++;
  //startQuiz(); //calling this function here calls the next question automatically
 }
 
@@ -394,9 +393,6 @@ function incrementWrongAnswer() {
     
     questionCounter++
     document.getElementById('question-counter').innerText = `Question ${questionCounter} / ${maxQuestions}`;
-
-    console.log('here', questionCounter);
-
 }
 
 startQuiz()
