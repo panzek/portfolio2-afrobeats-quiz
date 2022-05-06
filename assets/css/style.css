@@ -209,9 +209,9 @@ main {
     width: 100%;
 }
 
-/* .btn-wrapper .hide {
+.btn-wrapper .hide {
     display: none;
-} */
+}
 
 button {
     background-color: var(--Asparagus);
@@ -293,6 +293,47 @@ footer {
 /* footer ends  */
 
 /* Modal starts */
+#user-hide {
+    display: none;
+}
+
+.user-name {
+    align-items: center;
+    background-color: var(--pale-gold);
+    border: none;
+    border-radius: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    width: 30vw;
+}
+
+.username-box {
+    margin: 20px;
+}
+
+input[type=text] {
+    background: var(--off-white);
+    border: none;
+    border-radius: 10px;
+    margin: 20px 0 0;
+    padding: 0.5em;
+    width: 20vw;
+}
+
+.user-signup-btn { 
+    background-color: var(--Asparagus);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 10px;
+    padding: 0.4rem;
+}
 
 /* Modal ends  */
 

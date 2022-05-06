@@ -263,6 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let question = document.getElementById('question');
     let choices = document.getElementsByClassName('options');
     let questionCounter = document.getElementById('question-counter');
+    let username = document.getElementById('user-hide');
 
     let buttons = document.getElementsByClassName('btn');
         for(let btn of buttons) {
