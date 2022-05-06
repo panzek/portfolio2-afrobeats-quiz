@@ -287,6 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // questions = [...questions];
     acceptAnswers = true;
     currentQuestionIndex = 0;
+    updateQuestionCounter()
 
     displayQuestion();
 }
@@ -314,6 +315,7 @@ function displayQuestion() {
         
         checkAnswer(choice, correctAnswer);
      }
+
 }
 
 /**
