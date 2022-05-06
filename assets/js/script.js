@@ -259,8 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let acceptAnswers;
     let maxQuestions = 10;
-
-    let newQuestions = 0;
+    let currentQuestionIndex = 0;
     let question = document.getElementById('question');
     let choices = document.getElementsByClassName('options');
     let questionCounter = document.getElementById('question-counter');
@@ -271,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             btn.addEventListener('click', function() {
                 if(btn.classList.contains('next-btn')) {
-                    startQuiz();
+                    nextQuestion();
                 } else {
                     console.log(`I am not a next button`);
                 }
@@ -283,10 +282,10 @@ document.addEventListener('DOMContentLoaded', function() {
  */
  function startQuiz() {
 
-    questionCounter = 0;
     score = 0;
-    questions = [...questions];
+    // questions = [...questions];
     acceptAnswers = true;
+    currentQuestionIndex = 0;
 
     displayQuestion();
 }
@@ -297,22 +296,20 @@ document.addEventListener('DOMContentLoaded', function() {
 */
 function displayQuestion() {
 
-    let randomIndex = Math.floor(Math.random() * questions.length);
-    let randomQuestion = questions[randomIndex];
-    question.innerHTML = randomQuestion.question;
-    console.log(question.innerHTML)
+    // let randomIndex = Math.floor(Math.random() * questions.length); //to work with prevent question repeat if not delete
+    let selectedQuestion = questions[currentQuestionIndex];
+    question.innerHTML = selectedQuestion.question;
 
-    let correctAnswer = randomQuestion.rightAnswer
-    console.log('correct Answer is:', correctAnswer);
+    let correctAnswer = selectedQuestion.rightAnswer;
 
     //  display questions to the user
     for(let choice of choices) {
         
         let optionsValue = choice.getAttribute('data-value');
-        choice.innerHTML = randomQuestion.answers['option' + optionsValue];
+        choice.innerHTML = selectedQuestion.answers['option' + optionsValue];
 
         //prevent question repeat
-        questions.splice(randomIndex, 1);
+        // questions.splice(randomIndex, 1);
         
         checkAnswer(choice, correctAnswer);
      }
@@ -334,32 +331,34 @@ function checkAnswer(choice, correctAnswer) {
         let selectedAnswer = userAnswer.dataset.value;
 
         if(selectedAnswer === correctAnswer) {
-            console.log('correct answer', selectedAnswer)
-            choice.classList.add('correct')
+            choice.classList.add('correct');
             incrementScore();
-
         } else {
             choice.classList.add('incorrect');
-            incrementWrongAnswer()
+            incrementWrongAnswer();
         }
 
         setTimeout( () => {
             choice.classList.remove('incorrect', 'correct');
-        }, 1000)
+        }, 1000);
         
-        nextQuestion();
-        questionCount();
-        
-    })
-
+    });
 }
 
 /**
  * check user selected value and the correct answer
  * and apply background color specific to correct and incorrect answers 
  */
- function nextQuestion() {
- //startQuiz(); //calling this function here calls the next question automatically
+function nextQuestion() {
+    if(currentQuestionIndex === maxQuestions ) {
+        score = document.getElementById('scores').innerText;
+        alert(`Quiz over, Score: ${score}`);
+        return;
+    }
+
+    acceptAnswers = true;
+    updateQuestionCounter();
+    displayQuestion();
 }
 
 /**
@@ -367,11 +366,8 @@ function checkAnswer(choice, correctAnswer) {
  * increment the score count if the answer is correct
  */
 function incrementScore() {
-
     let score = document.getElementById('scores').innerText;
     document.getElementById('scores').innerText = ++score;
-    console.log('Correct Score', score);
-
 }
 
 /**
@@ -379,20 +375,17 @@ function incrementScore() {
  * increment the score count if the answer is incorrect
  */
 function incrementWrongAnswer() {
-
     let incorrectScore = document.getElementById('incorrect-score').innerText;
     document.getElementById('incorrect-score').innerText = ++incorrectScore;
-    console.log('Incorrect Score', incorrectScore);
 }
 
 /**
  * Keeps tract of question counter and
  * increment the question count for each question answered by the user
  */
- function questionCount() {
-    
-    questionCounter++
-    document.getElementById('question-counter').innerText = `Question ${questionCounter} / ${maxQuestions}`;
+ function updateQuestionCounter() {  
+    currentQuestionIndex++
+    questionCounter.innerText = `Question ${currentQuestionIndex} / ${maxQuestions}`;
 }
 
 startQuiz()
