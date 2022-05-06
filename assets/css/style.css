@@ -51,16 +51,16 @@ body {
 
 h1 {
     text-align: center;
-    margin-top: 10px 
 }
 
 header {
     align-items: center;
+    background-color: var(--earthy-green);
     display: flex;
     flex-direction: row;    
     flex-wrap: wrap;
     justify-content: space-evenly;  
-    margin: 10px 0;  
+    padding: 10px;
     position: sticky;
     top: 0;
     width: 100%;
@@ -69,6 +69,7 @@ header {
 
 /* logo */
 #logo {
+    align-items: center;
     color: #000;
     letter-spacing: 4px;
     text-decoration: none;
@@ -86,22 +87,23 @@ header {
     font-size: 1rem;
     list-style: none;
     margin: 0.5em;
+    width: 165px;
 }
 
 .navbar a {
     color: #000;
+    font-size: 18px;
+    font-weight: bolder;
     text-decoration: none;
 }
 
+.navbar a:hover,
 .navbar li.active > a {
-    text-decoration: underline;
-}
-
-.navbar a:hover {
     background-color: var(--red-ochre);
     border-radius: 5px;
-    padding: 5px 10px;
     color: var(--off-white);
+    padding: 5px 10px;
+    text-decoration: underline;
 }
 
 main {
@@ -324,6 +326,11 @@ input[type=text] {
     width: 20vw;
 }
 
+input[type=text]:focus {
+    border: 1px solid var(--pale-gold);
+    outline: none;
+}
+
 .user-signup-btn { 
     background-color: var(--Asparagus);
     border: none;
@@ -396,7 +403,7 @@ and (orientation: landscape) {
 and (orientation: landscape) {
     
     #hero-image {
-        aspect-ratio: 5/2;
+        aspect-ratio: 16/8;
         background: var(--earthy-green) url('../images/hero-image-afrobeats1.webp') center center/cover no-repeat;
         margin-top: 0;
         width: 100%;
@@ -408,7 +415,7 @@ and (orientation: landscape) {
     }
 
     #quiz-box {
-        margin: 19% 0 0 0;
+        margin: 18% 0 0 0;
     }   
 
     .question-box {
@@ -417,6 +424,10 @@ and (orientation: landscape) {
     
     #question {
         font-size: 1.8rem;
+}
+
+footer {
+    padding: 40px ;
 }
 
 }
