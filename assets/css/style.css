@@ -211,7 +211,7 @@ main {
     width: 100%;
 }
 
-.btn-wrapper .hide {
+.hide {
     display: none;
 }
 

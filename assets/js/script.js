@@ -355,7 +355,9 @@ function checkAnswer(choice, correctAnswer) {
 function nextQuestion() {
     if(currentQuestionIndex === maxQuestions ) {
         score = document.getElementById('scores').innerText;
-        alert(`Quiz over, Score: ${score}`);
+        // alert(`Quiz over, Score: ${score}`);
+        question.innerHTML = `Quiz over! And congratulations on finishing the Afrobeats quiz. You Scored: ${score} points. Well Done!`;
+        question.style.backgroundColor = "gold";
         return;
     }
 
@@ -389,6 +391,10 @@ function incrementWrongAnswer() {
  function updateQuestionCounter() {  
     currentQuestionIndex++
     questionCounter.innerText = `Question ${currentQuestionIndex} / ${maxQuestions}`;
+}
+
+function restart() {
+    currentQuestion = 0;
 }
 
 startQuiz()
