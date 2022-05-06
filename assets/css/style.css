@@ -209,9 +209,9 @@ main {
     width: 100%;
 }
 
-.btn-wrapper .hide {
+/* .btn-wrapper .hide {
     display: none;
-}
+} */
 
 button {
     background-color: var(--Asparagus);
@@ -236,6 +236,15 @@ button {
     background-color: var(--red-ochre);
     color: var(--off-white);
     font-size: 1.5rem;
+}
+
+.quiz-header .fa-circle-check {
+    color: var(--Asparagus);
+}
+
+.quiz-header .fa-circle-xmark {
+    color: var(--red-ochre);
+
 }
 
 /* footer */
@@ -282,6 +291,10 @@ footer {
 }
 
 /* footer ends  */
+
+/* Modal starts */
+
+/* Modal ends  */
 
 /* Screen sizes equal to or larger than 560px wide */
 @media screen and (min-width: 560px) 
