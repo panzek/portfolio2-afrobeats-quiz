@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // questions = [...questions];
     acceptAnswers = true;
     currentQuestionIndex = 0;
-    updateQuestionCounter()
+    updateQuestionCounter(); //this will increment count by 1 on first load
 
     displayQuestion();
 }
@@ -298,7 +298,6 @@ document.addEventListener('DOMContentLoaded', function() {
 */
 function displayQuestion() {
 
-    // let randomIndex = Math.floor(Math.random() * questions.length); //to work with prevent question repeat if not delete
     let currentQuestionIndex = Math.floor(Math.random() * questions.length); 
     let selectedQuestion = questions[currentQuestionIndex];
     question.innerHTML = selectedQuestion.question;
@@ -312,7 +311,7 @@ function displayQuestion() {
         choice.innerHTML = selectedQuestion.answers['option' + optionsValue];
 
         //prevent question repeat
-        questions.splice(currentQuestionIndex, 1);
+        // questions.splice(currentQuestionIndex, 1);
         
         checkAnswer(choice, correctAnswer);
      }
@@ -344,19 +343,26 @@ function checkAnswer(choice, correctAnswer) {
 
         setTimeout( () => {
             choice.classList.remove('incorrect', 'correct');
-        }, 1000);
+        }, 500);
         
+        clearSelected(choice)
     });
+}
+
+function clearSelected(choice) {
+    choice.disabled = false;
 }
 
 /**
  * check user selected value and the correct answer
  * and apply background color specific to correct and incorrect answers 
  */
-function nextQuestion(choice) {
+function nextQuestion() {
     if(currentQuestionIndex === maxQuestions ) {
         score = document.getElementById('scores').innerText;
         if(score >= 8) {
+            // question.innerHTML = `Quiz over! Congratulations on finishing the Afrobeats quiz. You Scored: ${score} points. 
+            // Fair game, but you may have to try again!`;
             let html = `
             <h1>Quiz over!</h1><br>
             <p>Congratulations on finishing the Afrobeats quiz.</p><br>
@@ -374,8 +380,9 @@ function nextQuestion(choice) {
             Well, not good enough. You definitely have to try again!`;
         }
         question.style.backgroundColor = "gold";
-        choice.classList.remove('options');
-        return;
+        // question.style.height = "300px";
+        // choice.classList.remove('options');
+        return; //without return the question counter will not end at count 10
     }
 
     
