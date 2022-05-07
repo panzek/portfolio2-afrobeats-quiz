@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let question = document.getElementById('question');
     let choices = document.getElementsByClassName('options');
     let questionCounter = document.getElementById('question-counter');
-    let username = document.getElementById('user-hide');
+    // let username = document.getElementById('user-hide');
 
     let buttons = document.getElementsByClassName('btn');
         for(let btn of buttons) {
@@ -299,6 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function displayQuestion() {
 
     // let randomIndex = Math.floor(Math.random() * questions.length); //to work with prevent question repeat if not delete
+    let currentQuestionIndex = Math.floor(Math.random() * questions.length); 
     let selectedQuestion = questions[currentQuestionIndex];
     question.innerHTML = selectedQuestion.question;
 
@@ -311,7 +312,7 @@ function displayQuestion() {
         choice.innerHTML = selectedQuestion.answers['option' + optionsValue];
 
         //prevent question repeat
-        // questions.splice(randomIndex, 1);
+        questions.splice(currentQuestionIndex, 1);
         
         checkAnswer(choice, correctAnswer);
      }
@@ -352,15 +353,32 @@ function checkAnswer(choice, correctAnswer) {
  * check user selected value and the correct answer
  * and apply background color specific to correct and incorrect answers 
  */
-function nextQuestion() {
+function nextQuestion(choice) {
     if(currentQuestionIndex === maxQuestions ) {
         score = document.getElementById('scores').innerText;
-        // alert(`Quiz over, Score: ${score}`);
-        question.innerHTML = `Quiz over! And congratulations on finishing the Afrobeats quiz. You Scored: ${score} points. Well Done!`;
+        if(score >= 8) {
+            let html = `
+            <h1>Quiz over!</h1><br>
+            <p>Congratulations on finishing the Afrobeats quiz.</p><br>
+            <p style='color: green'>You Scored: ${score} points.</p><br>
+            <p>You're a real Afrobeats lover. A pro.</p><br>
+            <p>Well Done!</p>
+            `
+            question.innerHTML = html;
+
+        } else if (score >= 5) {
+            question.innerHTML = `Quiz over! Congratulations on finishing the Afrobeats quiz. You Scored: ${score} points. 
+            Fair game, but you may have to try again!`;
+        } else {
+            question.innerHTML = `Quiz over! Congratulations on finishing the Afrobeats quiz. You Scored: ${score} points. 
+            Well, not good enough. You definitely have to try again!`;
+        }
         question.style.backgroundColor = "gold";
+        choice.classList.remove('options');
         return;
     }
 
+    
     acceptAnswers = true;
     updateQuestionCounter();
     displayQuestion();
