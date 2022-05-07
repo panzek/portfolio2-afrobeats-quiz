@@ -311,7 +311,7 @@ function displayQuestion() {
         choice.innerHTML = selectedQuestion.answers['option' + optionsValue];
 
         //prevent question repeat
-        // questions.splice(currentQuestionIndex, 1);
+        questions.slice(currentQuestionIndex, 1); 
         
         checkAnswer(choice, correctAnswer);
      }
