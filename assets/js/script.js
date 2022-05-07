@@ -267,15 +267,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let buttons = document.getElementsByClassName('btn');
         for(let btn of buttons) {
-            btn.innerText;
-
+            console.log(btn.innerText);
             btn.addEventListener('click', function() {
                 if(btn.classList.contains('next-btn')) {
                     nextQuestion();
                 } else {
                     console.log(`I am not a next button`);
                 }
-            })
+            });
         }
 
 /**
@@ -326,7 +325,7 @@ function checkAnswer(choice, correctAnswer) {
     choice.addEventListener('click', event => {
         if (!acceptAnswers) {
             return;
-        };
+        }
 
         acceptAnswers = false;
 
@@ -345,7 +344,7 @@ function checkAnswer(choice, correctAnswer) {
             choice.classList.remove('incorrect', 'correct');
         }, 500);
         
-        clearSelected(choice)
+        clearSelected(choice);
     });
 }
 
@@ -365,18 +364,18 @@ function nextQuestion() {
             // Fair game, but you may have to try again!`;
             let html = `
             <h1>Quiz over!</h1><br>
-            <p>Congratulations on finishing the Afrobeats quiz.</p><br>
+            <p>Congratulations ${userName} on finishing the Afrobeats quiz.</p><br>
             <p style='color: green'>You Scored: ${score} points.</p><br>
             <p>You're a real Afrobeats lover. A pro.</p><br>
             <p>Well Done!</p>
-            `
+            `;
             question.innerHTML = html;
 
         } else if (score >= 5) {
-            question.innerHTML = `Quiz over! Congratulations on finishing the Afrobeats quiz. You Scored: ${score} points. 
+            question.innerHTML = `Quiz over! Congratulations ${userName} on finishing the Afrobeats quiz. You Scored: ${score} points. 
             Fair game, but you may have to try again!`;
         } else {
-            question.innerHTML = `Quiz over! Congratulations on finishing the Afrobeats quiz. You Scored: ${score} points. 
+            question.innerHTML = `Quiz over! Congratulations ${userName} on finishing the Afrobeats quiz. You Scored: ${score} points. 
             Well, not good enough. You definitely have to try again!`;
         }
         question.style.backgroundColor = "gold";
@@ -419,12 +418,24 @@ function incrementWrongAnswer() {
 }
 
 function restart() {
-    currentQuestion = 0;
+    // currentQuestion = 0;
 }
 
-startQuiz()
+function handleSubmit(event) {
+    event.preventDefault;
 
-})
+    let userName = document.getElementById('user-name');
+    console.log(userName.value);
+    let userForm = document.getAnimations('user-form');
+
+    userForm.submit();
+
+    userForm.addEventListener('click', handleSubmit);
+}
+
+startQuiz();
+
+});
 
 
 
