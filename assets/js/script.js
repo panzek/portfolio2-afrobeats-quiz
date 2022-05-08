@@ -363,28 +363,22 @@ function nextQuestion() {
             // question.innerHTML = `Quiz over! Congratulations on finishing the Afrobeats quiz. You Scored: ${score} points. 
             // Fair game, but you may have to try again!`;
             let html = `
-            <h1>Quiz over!</h1><br>
-            <p>Congratulations ${userName} on finishing the Afrobeats quiz.</p><br>
-            <p style='color: green'>You Scored: ${score} points.</p><br>
-            <p>You're a real Afrobeats lover. A pro.</p><br>
-            <p>Well Done!</p>
+            <strong style="color: green">The game is over!</strong> Congratulations on finishing the Afrobeats quiz.
+            You Scored: ${score} points. You're a real Afrobeats lover. A pro. Well Done!
             `;
             question.innerHTML = html;
 
         } else if (score >= 5) {
-            question.innerHTML = `Quiz over! Congratulations ${userName} on finishing the Afrobeats quiz. You Scored: ${score} points. 
+            question.innerHTML = `The game is over! Congratulations on finishing the Afrobeats quiz. You Scored: ${score} points. 
             Fair game, but you may have to try again!`;
         } else {
-            question.innerHTML = `Quiz over! Congratulations ${userName} on finishing the Afrobeats quiz. You Scored: ${score} points. 
+            question.innerHTML = `The game is over! Congratulations on finishing the Afrobeats quiz. You Scored: ${score} point(s). 
             Well, not good enough. You definitely have to try again!`;
         }
         question.style.backgroundColor = "gold";
-        // question.style.height = "300px";
-        // choice.classList.remove('options');
         return; //without return the question counter will not end at count 10
     }
 
-    
     acceptAnswers = true;
     updateQuestionCounter();
     displayQuestion();
