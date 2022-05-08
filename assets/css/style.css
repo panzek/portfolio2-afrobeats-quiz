@@ -44,7 +44,7 @@ body {
     flex-direction: column;
     font-family: 'poppins', sans-serif;
     font-size: 16px;
-    min-height: 100%;
+    height: 100%;
 }
 
 /* Heading */
@@ -110,15 +110,6 @@ main {
     height: 100%;
 }
 
-/* Hero image */
-#hero-image {
-    aspect-ratio: 1/1;
-    background: var(--earthy-green) url('../images/hero-image-afrobeats2.webp') center center/cover no-repeat;
-    margin-top: 0;
-    width: 100%;
-    position: absolute;
-}
-
 /* Quiz area */
 
 .quiz-container {
@@ -126,9 +117,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 20px;
-    position: relative;
-    width: 100%;
 }
 
 #quiz-box {
@@ -297,8 +285,8 @@ footer {
 #user-hide {
     display: none;
 }
-
-.user-name {
+   
+#user-name {
     align-items: center;
     background-color: var(--pale-gold);
     border: none;
@@ -309,7 +297,8 @@ footer {
     margin: 10px auto;
     padding: 10px;
     text-align: center;
-    width: 30vw;
+    width: 410px;
+    position: relative;
 }
 
 .username-box {
@@ -376,13 +365,7 @@ and (orientation: portrait) {
 @media screen and (min-width: 768px) 
 and (orientation: portrait) {
     
-    #hero-image {
-        aspect-ratio: 3/1;
-        background: var(--earthy-green) url('../images/hero-image-afrobeats2.webp') center center/cover no-repeat;
-        margin-top: 0;
-        width: 100%;
-        position: absolute;
-    }
+ 
 }
 
 /* Landscape */
@@ -401,12 +384,9 @@ and (orientation: landscape) {
 @media screen and (min-width: 1024px) 
 and (orientation: landscape) {
     
-    #hero-image {
+    body {
         aspect-ratio: 16/8;
         background: var(--earthy-green) url('../images/hero-image-afrobeats1.webp') center center/cover no-repeat;
-        margin-top: 0;
-        width: 100%;
-        position: absolute;
     }
 
     .quiz-container {
@@ -426,10 +406,6 @@ and (orientation: landscape) {
     #question {
         border-radius: 10px 50px 0 0;
         font-size: 1.8rem;
-}
-
-footer {
-    padding: 40px ;
 }
 
 }

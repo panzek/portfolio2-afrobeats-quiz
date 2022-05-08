@@ -373,7 +373,7 @@ function nextQuestion() {
             Fair game, but you may have to try again!`;
         } else {
             question.innerHTML = `The game is over! Congratulations on finishing the Afrobeats quiz. You Scored: ${score} point(s). 
-            Well, not good enough. You definitely have to try again!`;
+            Well, not good enough. You definitely have to try again! And goodluck next time`;
         }
         question.style.backgroundColor = "gold";
         return; //without return the question counter will not end at count 10
