@@ -282,9 +282,9 @@ footer {
 /* footer ends  */
 
 /* Modal starts */
-#user-hide {
+/* #user-hide {
     display: none;
-}
+} */
    
 #user-name {
     align-items: center;
@@ -298,7 +298,6 @@ footer {
     padding: 10px;
     text-align: center;
     width: 410px;
-    position: relative;
 }
 
 .username-box {
@@ -307,27 +306,26 @@ footer {
 
 input[type=text] {
     background: var(--off-white);
-    border: none;
+    border: var(--off-white);
     border-radius: 10px;
     margin: 20px 0 0;
-    padding: 0.5em;
-    width: 20vw;
+    padding: 0.8em;
 }
 
 input[type=text]:focus {
     border: 1px solid var(--pale-gold);
-    outline: none;
+    outline-color: var(--earthy-green);
 }
 
 .user-signup-btn { 
     background-color: var(--Asparagus);
-    border: none;
+    border: 1px solid var(--Asparagus);
     border-radius: 10px;
     cursor: pointer;
     font-size: 1.1rem;
     font-weight: bold;
     margin: 10px;
-    padding: 0.4rem;
+    padding: 0.5rem;
 }
 
 /* Modal ends  */
