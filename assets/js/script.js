@@ -264,18 +264,27 @@ document.addEventListener('DOMContentLoaded', function() {
     let choices = document.getElementsByClassName('options');
     let questionCounter = document.getElementById('question-counter');
     // let username = document.getElementById('user-hide');
+    let startButton = document.getElementsByClassName('start-btn')[0];
+    // let prevButton = document.getElementsByClassName('prev-btn')[0];
+    let nextButton = document.getElementsByClassName('next-btn')[0];
+    let restartButton = document.getElementsByClassName('restart-btn')[0];
 
-    let buttons = document.getElementsByClassName('btn');
-        for(let btn of buttons) {
-            console.log(btn.innerText);
-            btn.addEventListener('click', function() {
-                if(btn.classList.contains('next-btn')) {
-                    nextQuestion();
-                } else {
-                    console.log(`I am not a next button`);
-                }
-            });
-        }
+    startButton.addEventListener('click', startQuiz);
+    // prevButton.addEventListener('click', prev);
+    nextButton.addEventListener('click', nextQuestion);
+    restartButton.addEventListener('click', restartQuiz);
+
+    // let buttons = document.getElementsByClassName('btn');
+    //     for(let btn of buttons) {
+    //         console.log(btn.innerText);
+    //         btn.addEventListener('click', function() {
+    //             if(btn.classList.contains('next-btn')) {
+    //                 nextQuestion();
+    //             } else {
+    //                 console.log(`I am not a next button`);
+    //             }
+    //         });
+    //     }
 
 /**
  * start the quiz on user click of the start button after creating username
@@ -286,6 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // questions = [...questions];
     acceptAnswers = true;
     currentQuestionIndex = 0;
+    // handleSubmit();
     updateQuestionCounter(); //this will increment count by 1 on first load
 
     displayQuestion();
@@ -302,11 +312,14 @@ function displayQuestion() {
     question.innerHTML = selectedQuestion.question;
 
     let correctAnswer = selectedQuestion.rightAnswer;
+    console.log(correctAnswer) //for testing
 
     //  display questions to the user
     for(let choice of choices) {
+        console.log(choice) //for testing
         
-        let optionsValue = choice.getAttribute('data-value');
+        // let optionsValue = choice.getAttribute('data-value');
+        let optionsValue = choice.dataset.value;
         choice.innerHTML = selectedQuestion.answers['option' + optionsValue];
 
         //prevent question repeat
@@ -321,8 +334,10 @@ function displayQuestion() {
  * Checks the user's selected answer and the correct answer
  */
 function checkAnswer(choice, correctAnswer) {
+    console.log(checkAnswer) //for testing
 
     choice.addEventListener('click', event => {
+        console.log(choice) //for testing
         if (!acceptAnswers) {
             return;
         }
@@ -375,13 +390,15 @@ function nextQuestion() {
             question.innerHTML = `The game is over! Congratulations on finishing the Afrobeats quiz. You Scored: ${score} point(s). 
             Well, not good enough. You definitely have to try again! And goodluck next time`;
         }
+        restartButton.classList.remove('hide');
+        nextButton.classList.add('hide');
         question.style.backgroundColor = "gold";
         return; //without return the question counter will not end at count 10
     }
 
-    acceptAnswers = true;
+    acceptAnswers = true; //display selecting answers when restart button is activated.
     updateQuestionCounter();
-    displayQuestion();
+    // displayQuestion();
 }
 
 /**
@@ -411,9 +428,22 @@ function incrementWrongAnswer() {
     questionCounter.innerText = `Question ${currentQuestionIndex} / ${maxQuestions}`;
 }
 
-function restart() {
-    // currentQuestion = 0;
+/**
+ * restart the quiz on user click of the restart button at the end of every game
+ */
+ function restartQuiz() {
+
+    score = 0;
+    incorrectScore = 0;
+    acceptAnswers = true;
+    currentQuestionIndex = 0;
+    // handleSubmit();
+    nextButton.classList.remove('hide');
+    restartButton.classList.add('hide');
+
+    startQuiz();
 }
+
 
 function handleSubmit(event) {
     event.preventDefault;
