@@ -274,30 +274,19 @@ document.addEventListener('DOMContentLoaded', function() {
     nextButton.addEventListener('click', nextQuestion);
     restartButton.addEventListener('click', restartQuiz);
 
-    // let buttons = document.getElementsByClassName('btn');
-    //     for(let btn of buttons) {
-    //         console.log(btn.innerText);
-    //         btn.addEventListener('click', function() {
-    //             if(btn.classList.contains('next-btn')) {
-    //                 nextQuestion();
-    //             } else {
-    //                 console.log(`I am not a next button`);
-    //             }
-    //         });
-    //     }
-
 /**
  * start the quiz on user click of the start button after creating username
  */
  function startQuiz() {
 
     score = 0;
-    // questions = [...questions];
+    questions = [...questions];
     acceptAnswers = true;
     currentQuestionIndex = 0;
-    // handleSubmit();
-    updateQuestionCounter(); //this will increment count by 1 on first load
+    updateQuestionCounter(); //increments count by 1 on first load
+    restartButton.classList.add('hide');
 
+    // handleSubmit();
     displayQuestion();
 }
 
@@ -312,17 +301,14 @@ function displayQuestion() {
     question.innerHTML = selectedQuestion.question;
 
     let correctAnswer = selectedQuestion.rightAnswer;
-    console.log(correctAnswer) //for testing
 
-    //  display questions to the user
+    //displays questions to the user
     for(let choice of choices) {
-        console.log(choice) //for testing
         
-        // let optionsValue = choice.getAttribute('data-value');
         let optionsValue = choice.dataset.value;
         choice.innerHTML = selectedQuestion.answers['option' + optionsValue];
 
-        //prevent question repeat
+        //prevents question repeat
         questions.slice(currentQuestionIndex, 1); 
         
         checkAnswer(choice, correctAnswer);
@@ -334,10 +320,8 @@ function displayQuestion() {
  * Checks the user's selected answer and the correct answer
  */
 function checkAnswer(choice, correctAnswer) {
-    console.log(checkAnswer) //for testing
 
     choice.addEventListener('click', event => {
-        console.log(choice) //for testing
         if (!acceptAnswers) {
             return;
         }
@@ -354,17 +338,16 @@ function checkAnswer(choice, correctAnswer) {
             choice.classList.add('incorrect');
             incrementWrongAnswer();
         }
-
-        setTimeout( () => {
-            choice.classList.remove('incorrect', 'correct');
-        }, 500);
         
         clearSelected(choice);
     });
 }
 
+//clear all the previous questions and selected answer
 function clearSelected(choice) {
-    choice.disabled = false;
+    setTimeout( () => {
+            choice.classList.remove('incorrect', 'correct');
+        }, 500);
 }
 
 /**
@@ -388,8 +371,9 @@ function nextQuestion() {
             Fair game, but you may have to try again!`;
         } else {
             question.innerHTML = `The game is over! Congratulations on finishing the Afrobeats quiz. You Scored: ${score} point(s). 
-            Well, not good enough. You definitely have to try again! And goodluck next time`;
+            Well, not good enough. You definitely have to try again! And goodluck next time!`;
         }
+
         restartButton.classList.remove('hide');
         nextButton.classList.add('hide');
         question.style.backgroundColor = "gold";
@@ -398,7 +382,7 @@ function nextQuestion() {
 
     acceptAnswers = true; //display selecting answers when restart button is activated.
     updateQuestionCounter();
-    // displayQuestion();
+    displayQuestion();
 }
 
 /**
@@ -426,22 +410,19 @@ function incrementWrongAnswer() {
  function updateQuestionCounter() {  
     currentQuestionIndex++
     questionCounter.innerText = `Question ${currentQuestionIndex} / ${maxQuestions}`;
-}
+};
 
 /**
  * restart the quiz on user click of the restart button at the end of every game
  */
  function restartQuiz() {
 
-    score = 0;
-    incorrectScore = 0;
-    acceptAnswers = true;
-    currentQuestionIndex = 0;
-    // handleSubmit();
     nextButton.classList.remove('hide');
     restartButton.classList.add('hide');
 
+    location.reload(); //refreshes the whole page on restart button click
     startQuiz();
+    
 }
 
 
