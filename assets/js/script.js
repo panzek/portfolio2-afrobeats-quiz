@@ -254,9 +254,10 @@ let questions = [
     }
 ]
 
+//get elements from the DOM and store their values in variables
 document.addEventListener('DOMContentLoaded', function() {
-    //get the question and options values from the DOM and store these values in variables
 
+    let correctAnswer;
     let acceptAnswers;
     let maxQuestions = 10;
     let currentQuestionIndex = 0;
@@ -265,19 +266,17 @@ document.addEventListener('DOMContentLoaded', function() {
     let questionCounter = document.getElementById('question-counter');
     // let username = document.getElementById('user-hide');
     let startButton = document.getElementsByClassName('start-btn')[0];
-    // let prevButton = document.getElementsByClassName('prev-btn')[0];
     let nextButton = document.getElementsByClassName('next-btn')[0];
     let restartButton = document.getElementsByClassName('restart-btn')[0];
 
     startButton.addEventListener('click', startQuiz);
-    // prevButton.addEventListener('click', prev);
     nextButton.addEventListener('click', nextQuestion);
     restartButton.addEventListener('click', restartQuiz);
 
 /**
  * start the quiz on user click of the start button after creating username
  */
- function startQuiz() {
+function startQuiz() {
 
     score = 0;
     questions = [...questions];
@@ -300,53 +299,58 @@ function displayQuestion() {
     let selectedQuestion = questions[currentQuestionIndex];
     question.innerHTML = selectedQuestion.question;
 
-    let correctAnswer = selectedQuestion.rightAnswer;
+    correctAnswer = selectedQuestion.rightAnswer;
 
     //displays questions to the user
     for(let choice of choices) {
         
         let optionsValue = choice.dataset.value;
         choice.innerHTML = selectedQuestion.answers['option' + optionsValue];
-
-        //prevents question repeat
-        questions.slice(currentQuestionIndex, 1); 
-        
-        checkAnswer(choice, correctAnswer);
      }
 
+    //prevents question repeat
+    questions.splice(currentQuestionIndex, 1); 
+   
+    //Adds the event listeners to the possible answers
+    for(let choice of choices) {
+        choice.addEventListener('click', getUserSelection)
+    }
 }
 
 /**
- * Checks the user's selected answer and the correct answer
+ * Gets the user's selection and calls the checkAnswer function
  */
-function checkAnswer(choice, correctAnswer) {
+function getUserSelection(event) {
+    if (!acceptAnswers) {
+        return;
+    }
 
-    choice.addEventListener('click', event => {
-        if (!acceptAnswers) {
-            return;
-        }
+    acceptAnswers = false;
+    let userAnswer = event.target;
+    let selectedAnswer = userAnswer.dataset.value;
 
-        acceptAnswers = false;
-
-        let userAnswer = event.target;
-        let selectedAnswer = userAnswer.dataset.value;
-
-        if(selectedAnswer === correctAnswer) {
-            choice.classList.add('correct');
-            incrementScore();
-        } else {
-            choice.classList.add('incorrect');
-            incrementWrongAnswer();
-        }
-        
-        clearSelected(choice);
-    });
+    checkAnswer(selectedAnswer, userAnswer);
 }
 
-//clear all the previous questions and selected answer
-function clearSelected(choice) {
-    setTimeout( () => {
-            choice.classList.remove('incorrect', 'correct');
+/**
+ * Checks the user's selected answer and correct answer  
+ * clear all the previous questions and selected answer
+ */
+function checkAnswer(selectedAnswer, userAnswer) {
+
+        if(selectedAnswer === correctAnswer) {
+            userAnswer.classList.add('correct');
+            incrementScore();
+        } else {
+            userAnswer.classList.add('incorrect');
+            incrementWrongAnswer();
+        }
+
+        setTimeout( () => {
+            userAnswer.classList.remove('incorrect', 'correct');
+            for(let choice of choices) {
+                choice.removeEventListener('click', getUserSelection)
+            }
         }, 500);
 }
 
@@ -358,19 +362,13 @@ function nextQuestion() {
     if(currentQuestionIndex === maxQuestions ) {
         score = document.getElementById('scores').innerText;
         if(score >= 8) {
-            // question.innerHTML = `Quiz over! Congratulations on finishing the Afrobeats quiz. You Scored: ${score} points. 
-            // Fair game, but you may have to try again!`;
-            let html = `
-            <strong style="color: green">The game is over!</strong> Congratulations on finishing the Afrobeats quiz.
-            You Scored: ${score} points. You're a real Afrobeats lover. A pro. Well Done!
-            `;
-            question.innerHTML = html;
-
+            question.innerHTML = `The game is over! Congratulations on finishing the Afrobeats quiz!
+            You Scored: ${score} points. You're a real Afrobeats lover. A pro. Well Done!`;
         } else if (score >= 5) {
-            question.innerHTML = `The game is over! Congratulations on finishing the Afrobeats quiz. You Scored: ${score} points. 
-            Fair game, but you may have to try again!`;
+            question.innerHTML = `The game is over! Congratulations on finishing the Afrobeats quiz! You Scored: ${score} points. 
+            Fair play, but you may have to try again!`;
         } else {
-            question.innerHTML = `The game is over! Congratulations on finishing the Afrobeats quiz. You Scored: ${score} point(s). 
+            question.innerHTML = `The game is over! Congratulations on finishing the Afrobeats quiz! You Scored: ${score} point(s). 
             Well, not good enough. You definitely have to try again! And goodluck next time!`;
         }
 
@@ -416,13 +414,11 @@ function incrementWrongAnswer() {
  * restart the quiz on user click of the restart button at the end of every game
  */
  function restartQuiz() {
-
     nextButton.classList.remove('hide');
     restartButton.classList.add('hide');
 
     location.reload(); //refreshes the whole page on restart button click
     startQuiz();
-    
 }
 
 
