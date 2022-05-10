@@ -106,28 +106,31 @@
     
     <!-- Modal -->
     <!-- username form -->
-    <div>
-        <form id="user-hide" action="" method="">
-            <div id="user-name">
-                <h2>Hey, Welcome to Afrobeats Quiz!</h2>
-                <div class="username-box">
-                    <label for="username">
-                        <h3>
-                            Please enter your Username. 
-                        </h3>
-                        You need a username to play the Afrobeats Quiz. 
-                        This will enable use keep tab on all the players and be able 
-                        to show you how you faired compared to others. Thank You!
-                    </label> 
-                    <form id="user-form" method="" action="">  
-                        <input id="username" type="text" name="username" placeholder="Enter Your Username">
-                        <input type="submit" value="Create Username" class="user-signup-btn"> 
-                    </form>
-                </div>
-                <div id="response">
-                    <!-- add response message here -->
-                </div>
-        </form>
+    <div id="overlay">
+        <div id="modal">
+            <form id="user-hide" action="" method="">
+                <div id="user-name">
+                    <h2>Hey, Welcome to Afrobeats Quiz!</h2>
+                    <div class="username-box">
+                        <label for="username">
+                            <h3>
+                                Please enter your Username. 
+                            </h3>
+                            You need a username to play the Afrobeats Quiz. 
+                            This will enable use keep tab on all the players and be able 
+                            to show you how you faired compared to others. Thank You!
+                        </label> 
+                        <form id="user-form" method="POST" action="https://formdump.codeinstitute.net/">  
+                            <input id="username" type="text" name="username" placeholder="Enter Your Username">
+                            <input type="submit" value="Create Username" class="user-signup-btn"> 
+                        </form>
+                    </div>
+                    <div id="response">
+                        <!-- add response message here -->
+                    </div>
+                </div>              
+            </form>
+        </div>
     </div>
 
     <!-- footer -->
