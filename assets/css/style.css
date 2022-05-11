@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@100&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
 /* Global style */
@@ -40,6 +39,7 @@ html {
 }
 
 body {
+    background: var(--earthy-green) url('../images/hero-image-afrobeats2.webp') center center/cover no-repeat;
     display: flex;
     flex-direction: column;
     font-family: 'poppins', sans-serif;
@@ -55,7 +55,7 @@ h1 {
 
 header {
     align-items: center;
-    background-color: var(--earthy-green);
+    background-color: var(--Asparagus);
     display: flex;
     flex-direction: row;    
     flex-wrap: wrap;
@@ -117,27 +117,31 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 10%;
 }
 
 #quiz-box {
     background-color: var(--earthy-green);
-    border-radius: 10px 10px 0 0;
+    border-radius: 5px 5px 0 0;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     padding: 10px 5px 15px;
-    width: 85%;
 }
 
 .question-bar {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
     margin-bottom: 15px;
+    width: 100%;
 }
 
 .quiz-header {
     align-items: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
     width: 100%;
 }
@@ -307,13 +311,20 @@ footer {
     top: 0;
 }
 
+/* Username form  */
+
 /* #user-hide {
     display: none;
 } */
-   
+
+#quizzer {
+    color: var(--red-ochre);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 #user-name {
     align-items: center;
-    background-color: var(--pale-gold);
     border: none;
     border-radius: 10px 50px;
     display: flex;
@@ -360,9 +371,7 @@ input[type=text]:focus {
 and (orientation: portrait) {
 
     .question-box {
-        border-radius: 0 0 5px 5px;
         border-bottom: 1px solid var(--earthy-green);
-        padding: 10px;
         width: 90%;
     }
     
@@ -376,12 +385,7 @@ and (orientation: portrait) {
         padding: 1rem;
         text-align: center;
     }
-    
-    #quiz-box {
-        width: 85%;
-    }
 }
-
 
 /* Tablets */
 /* Screen sizes equal to or larger than 768px wide */
@@ -412,22 +416,26 @@ and (orientation: landscape) {
         background: var(--earthy-green) url('../images/hero-image-afrobeats1.webp') center center/cover no-repeat;
     }
 
+    header {
+        background-color: none;
+    }
+
     .quiz-container {
         margin-top: none;
     }
 
     #quiz-box {
         border-radius: 10px 50px 0 0;
-        margin: 18% 0 0 0;
+        width: 100%;
     }   
 
     .question-box {
         border-radius: 10px 50px;
+        margin-top: 5%;
         width: 50%;
     }
     
     #question {
-        border-radius: 10px 50px 0 0;
         font-size: 1.8rem;
 }
 

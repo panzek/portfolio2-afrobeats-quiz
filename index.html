@@ -42,32 +42,35 @@
             </div>
         </section>
         <div class="quiz-container">
-            <div id="quiz-box">
-                <div class="question-bar">
-                    <div>
-                        <span id="question-counter">Question 0 / 10</span>
-                    </div>
-                </div>
-                <div class="quiz-header">
-                    <div>
-                        <div>
-                            <span><i class="fa-solid fa-circle-xmark"></i>
-                                Incorrect Score:
-                            </span>
-                            <span id="incorrect-score">0</span>
-                        </div>
-                    </div>
-                    <div >
-                        <div>
-                            <span><i class="fa-solid fa-circle-check"></i>
-                                Correct Score:
-                            </span>
-                            <span id="scores">0</span>
-                        </div>
-                    </div>
-                </div>
-                </div> 
                 <div class="question-box">
+                    <div id="quiz-box">
+                        <div class="question-bar">
+                            <div>
+                                <span id="question-counter">Question 0 / 10</span>
+                            </div>
+                            <div>
+                                Quizzer: <span id="quizzer">Guest</span>
+                            </div>
+                        </div>
+                        <div class="quiz-header">
+                            <div>
+                                <div>
+                                    <span><i class="fa-solid fa-circle-xmark"></i>
+                                        Incorrect Score:
+                                    </span>
+                                    <span id="incorrect-score">0</span>
+                                </div>
+                            </div>
+                            <div >
+                                <div>
+                                    <span><i class="fa-solid fa-circle-check"></i>
+                                        Correct Score:
+                                    </span>
+                                    <span id="scores">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div id="question">
                         <h2></h2>
                     </div>
@@ -86,9 +89,6 @@
                         </div>
                     </div> 
                     <div class="btn-wrapper">
-                        <button class="btn start-btn hide">Start
-                            <i class="fa-solid fa-circle-play"></i>
-                        </button>
                         <button class="btn prev-btn hide">
                             <i class="fa-solid fa-circle-chevron-left"></i>
                             Prev
@@ -114,15 +114,21 @@
                     <div class="username-box">
                         <label for="username">
                             <h3>
-                                Please enter your Username. 
+                                Please get a Username
                             </h3>
                             You need a username to play the Afrobeats Quiz. 
                             This will enable use keep tab on all the players and be able 
                             to show you how you faired compared to others. Thank You!
                         </label> 
-                        <form id="user-form" method="POST" action="https://formdump.codeinstitute.net/">  
-                            <input id="username" type="text" name="username" placeholder="Enter Your Username">
-                            <input type="submit" value="Create Username" class="user-signup-btn"> 
+                        <form method="POST" action="https://formdump.codeinstitute.net/">  
+                            <div id="form-control">
+                                <input id="username" type="text" name="username" placeholder="Enter Username">
+                            </div>
+                            <div id="start-btn">
+                                <button class="btn" id="start" type="submit">Start Quiz
+                                    <i class="fa-solid fa-circle-play"></i>
+                                </button>
+                            </div>
                         </form>
                     </div>
                     <div id="response">
