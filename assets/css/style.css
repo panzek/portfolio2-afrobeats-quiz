@@ -55,7 +55,7 @@ h1 {
 
 header {
     align-items: center;
-    background-color: var(--Asparagus);
+    /* background-color: var(--earthy-green); */
     display: flex;
     flex-direction: row;    
     flex-wrap: wrap;
@@ -287,7 +287,7 @@ footer {
 
 /* Modal starts */
 #overlay {
-    /* display: none; */
+    display: none;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -385,8 +385,12 @@ input[type=text]:focus {
 /* Modal ends  */
 
 /* Screen sizes equal to or larger than 560px wide */
-@media screen and (min-width: 560px) 
+@media screen and (max-width: 560px) 
 and (orientation: portrait) {
+
+    header {
+        background-color: var(--earthy-green);
+    }
 
     .question-box {
         border-bottom: 1px solid var(--earthy-green);
@@ -406,11 +410,28 @@ and (orientation: portrait) {
 }
 
 /* Tablets */
+/* Screen sizes equal to or larger than 280px wide */
+@media screen and (min-width: 280px) 
+and (orientation: portrait) {
+
+    header {
+        align-items: center;
+        padding: 0.5rem;
+    }
+
+    .quiz-container {
+        margin: 0.7rem 0;
+    }
+
+    .question-bar {
+        flex-direction: column-reverse;
+    }
+}
+
 /* Screen sizes equal to or larger than 768px wide */
 @media screen and (min-width: 768px) 
 and (orientation: portrait) {
-    
- 
+
 }
 
 /* Landscape */
