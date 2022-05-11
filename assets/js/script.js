@@ -264,12 +264,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let question = document.getElementById('question');
     let choices = document.getElementsByClassName('options');
     let questionCounter = document.getElementById('question-counter');
-    // let username = document.getElementById('user-hide');
-    let startButton = document.getElementsByClassName('start-btn')[0];
     let nextButton = document.getElementsByClassName('next-btn')[0];
     let restartButton = document.getElementsByClassName('restart-btn')[0];
 
-    startButton.addEventListener('click', startQuiz);
     nextButton.addEventListener('click', nextQuestion);
     restartButton.addEventListener('click', restartQuiz);
 
@@ -421,22 +418,36 @@ function incrementWrongAnswer() {
     startQuiz();
 }
 
+// form control 
+let username = document.getElementById('username').focus();
+let startButton = document.getElementById('start-btn');
 
-function handleSubmit(event) {
-    event.preventDefault;
+// Add username value to local storage captured by mouse and keyboard events
+username = document.addEventListener('keypress', handleKey); 
 
-    let userName = document.getElementById('user-name');
-    console.log(userName.value);
-    let userForm = document.getAnimations('user-form');
+function handleKey (event) {
+    if(event.key === 'Enter')
+    quizPlayer = document.getElementById('username').value;
+    localStorage.setItem('name', quizPlayer);
+    quizzPlayer.style.display = 'none';
+};
 
-    userForm.submit();
+startButton.addEventListener('click', handleSubmit);
+function handleSubmit () {
+    startButton = document.getElementById('username').value;
+    localStorage.setItem('name', startButton);
+};
 
-    userForm.addEventListener('click', handleSubmit);
+// Retrieve username value from local storage and display in UI 
+let quizzer = localStorage.getItem('name');
+if(quizzer) {
+    document.getElementById('quizzer').innerText = quizzer;
+} else {
+    document.getElementById('quizzer').innerText = "Guest";
 }
+
 
 startQuiz();
 
 });
-
-
 
