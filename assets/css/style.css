@@ -316,6 +316,12 @@ footer {
 /* #user-hide {
     display: none;
 } */
+#form-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
 
 #quizzer {
     color: var(--red-ochre);
@@ -362,6 +368,18 @@ input[type=text]:focus {
     font-weight: bold;
     margin: 10px;
     padding: 0.5rem;
+}
+
+#start {
+    background-color: var(--Asparagus);
+    border: 1px solid var(--Asparagus);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    height: 5vh;
+    margin: auto;
+    width: 160px; 
 }
 
 /* Modal ends  */
@@ -437,6 +455,10 @@ and (orientation: landscape) {
     
     #question {
         font-size: 1.8rem;
+}
+
+#modal {
+    max-width: 30%;
 }
 
 }
