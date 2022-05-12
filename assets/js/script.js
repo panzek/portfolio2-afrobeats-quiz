@@ -252,7 +252,7 @@ let questions = [
             },
         rightAnswer: "2"
     }
-]
+];
 
 //get elements from the DOM and store their values in variables
 document.addEventListener('DOMContentLoaded', function() {
@@ -310,7 +310,7 @@ function displayQuestion() {
    
     //Adds the event listeners to the possible answers
     for(let choice of choices) {
-        choice.addEventListener('click', getUserSelection)
+        choice.addEventListener('click', getUserSelection);
     }
 }
 
@@ -346,7 +346,7 @@ function checkAnswer(selectedAnswer, userAnswer) {
         setTimeout( () => {
             userAnswer.classList.remove('incorrect', 'correct');
             for(let choice of choices) {
-                choice.removeEventListener('click', getUserSelection)
+                choice.removeEventListener('click', getUserSelection);
             }
         }, 500);
 }
@@ -405,7 +405,7 @@ function incrementWrongAnswer() {
  function updateQuestionCounter() {  
     currentQuestionIndex++
     questionCounter.innerText = `Question ${currentQuestionIndex} / ${maxQuestions}`;
-};
+}
 
 /**
  * restart the quiz on user click of the restart button at the end of every game
@@ -423,20 +423,20 @@ let username = document.getElementById('username').focus();
 let startButton = document.getElementById('start-btn');
 
 // Add username value to local storage captured by mouse and keyboard events
-username = document.addEventListener('keypress', handleKey); 
+username = document.addEventListener('keydown', handleKey); 
 
 function handleKey (event) {
     if(event.key === 'Enter')
-    quizPlayer = document.getElementById('username').value;
-    localStorage.setItem('name', quizPlayer);
-    quizzPlayer.style.display = 'none';
-};
+    username = document.getElementById('username').value;
+    localStorage.setItem('name', username);
+    username.style.display = 'none';
+}
 
 startButton.addEventListener('click', handleSubmit);
 function handleSubmit () {
     startButton = document.getElementById('username').value;
     localStorage.setItem('name', startButton);
-};
+}
 
 // Retrieve username value from local storage and display in UI 
 let quizzer = localStorage.getItem('name');

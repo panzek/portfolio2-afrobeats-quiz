@@ -287,7 +287,7 @@ footer {
 
 /* Modal starts */
 #overlay {
-    display: none;
+    /* display: none; */
     position: fixed;
     bottom: 0;
     left: 0;
@@ -456,11 +456,11 @@ and (orientation: landscape) {
     }
 
     header {
-        background-color: none;
+        background-color: var(--off-white);
     }
 
     .quiz-container {
-        margin-top: none;
+        margin-bottom: 0;
     }
 
     #quiz-box {
