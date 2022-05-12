@@ -76,36 +76,6 @@ header {
     text-transform: uppercase;
 }
 
-.navbar ul {
-    align-items: center;
-    display: flex;
-    text-align: center;
-}
-
-.navbar li {
-    display: inline-block;
-    font-size: 1rem;
-    list-style: none;
-    margin: 0.5em;
-    width: 165px;
-}
-
-.navbar a {
-    color: #000;
-    font-size: 18px;
-    font-weight: bolder;
-    text-decoration: none;
-}
-
-.navbar a:hover,
-.navbar li.active > a {
-    background-color: var(--red-ochre);
-    border-radius: 5px;
-    color: var(--off-white);
-    padding: 5px 10px;
-    text-decoration: underline;
-}
-
 main {
     height: 100%;
 }
@@ -286,7 +256,7 @@ footer {
 /* footer ends  */
 
 /* Modal starts */
-#overlay {
+.overlay {
     /* display: none; */
     position: fixed;
     bottom: 0;
@@ -316,6 +286,7 @@ footer {
 /* #user-hide {
     display: none;
 } */
+
 #form-control {
     display: flex;
     justify-content: center;
@@ -416,15 +387,12 @@ and (orientation: portrait) {
 
     header {
         align-items: center;
+        background-color: var(--earthy-green);
         padding: 0.5rem;
     }
 
     .quiz-container {
         margin: 0.7rem 0;
-    }
-
-    .question-bar {
-        flex-direction: column-reverse;
     }
 }
 

@@ -8,7 +8,7 @@
     <meta name="keywords" content="Afrobeats quiz, Afrobeats, quiz, music, Africa, African music"> 
     <meta name="theme-color" content="#89a670"> 
     <meta name="apple-mobile-web-app-capable" content="yes"> 
-    <meta name="apple-mobile-web-app-status-bar-style" content="# #e6be8a">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#e6be8a">
     <title>Home | Afrobeats Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
@@ -18,30 +18,13 @@
     <header>
         <div>
             <a id="logo" href="index.html">
-                <h1><i class="fa-solid fa-user-pen" aria-hidden="true"></i> Afrobeats Quiz</h1>
+                <h1><i class="fa-brands fa-pagelines" style="color: green" aria-hidden="true"></i> Afrobeats Quiz</h1> 
             </a>
         </div>
-        <nav class="navbar" >
-            <ul>
-                <li class="active">
-                    <a href="index.html" aria-label="You are on the how to play the game page of Afrobeats quiz" aria-current="page">How to Play</a> 
-                </li>
-                <li>
-                    <a href="./about.html" aria-label="Go to the about afrobeats page">About Afrobeats</a> 
-                </li>
-            </ul>
-        </nav>
     </header>
 
     <!-- main -->
     <main>
-        <section>
-            <div id="hero-image">
-                <div>
-                    <h2 class="hero-image-text">Aloe Vera plant in white vase</h2>
-                </div>
-            </div>
-        </section>
         <div class="quiz-container">
                 <div class="question-box">
                     <div id="quiz-box">
@@ -107,7 +90,7 @@
     
     <!-- Modal -->
     <!-- username form -->
-    <div id="overlay">
+    <div  class="overlay hide">
         <div id="modal">
                 <div id="user-name">
                     <h2>Hey, Welcome to Afrobeats Quiz!</h2>
@@ -120,7 +103,7 @@
                             This will enable use keep tab on all the players and be able 
                             to show you how you faired compared to others. Thank You!
                         </p>
-                        <form method="POST" action="https://formdump.codeinstitute.net/">  
+                        <form action="index.html">  
                             <div id="form-control">
                                 <input id="username" type="text" name="username" placeholder="Enter Username">
                             </div>

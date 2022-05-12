@@ -1,4 +1,4 @@
-
+/*jshint esversion: 6 */
 let questions = [
 
     {
@@ -257,6 +257,7 @@ let questions = [
 //get elements from the DOM and store their values in variables
 document.addEventListener('DOMContentLoaded', function() {
 
+    let score;
     let correctAnswer;
     let acceptAnswers;
     let maxQuestions = 10;
@@ -266,6 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let questionCounter = document.getElementById('question-counter');
     let nextButton = document.getElementsByClassName('next-btn')[0];
     let restartButton = document.getElementsByClassName('restart-btn')[0];
+    let overlay = document.getElementsByClassName('overlay')[0];
 
     nextButton.addEventListener('click', nextQuestion);
     restartButton.addEventListener('click', restartQuiz);
@@ -281,6 +283,7 @@ function startQuiz() {
     currentQuestionIndex = 0;
     updateQuestionCounter(); //increments count by 1 on first load
     restartButton.classList.add('hide');
+    // overlay.classList.remove('hide');
 
     // handleSubmit();
     displayQuestion();
@@ -403,7 +406,7 @@ function incrementWrongAnswer() {
  * increment the question count for each question answered by the user
  */
  function updateQuestionCounter() {  
-    currentQuestionIndex++
+    currentQuestionIndex++;
     questionCounter.innerText = `Question ${currentQuestionIndex} / ${maxQuestions}`;
 }
 
@@ -422,20 +425,20 @@ function incrementWrongAnswer() {
 let username = document.getElementById('username').focus();
 let startButton = document.getElementById('start-btn');
 
-// Add username value to local storage captured by mouse and keyboard events
+// Add username value to local storage when captured by mouse and keyboard events
 username = document.addEventListener('keydown', handleKey); 
 
 function handleKey (event) {
-    if(event.key === 'Enter')
-    username = document.getElementById('username').value;
-    localStorage.setItem('name', username);
-    username.style.display = 'none';
+    if(event.key === 'Enter') {
+        username = document.getElementById('username').value;
+        localStorage.setItem('name', username);
+    }
 }
 
 startButton.addEventListener('click', handleSubmit);
 function handleSubmit () {
-    startButton = document.getElementById('username').value;
-    localStorage.setItem('name', startButton);
+    username = document.getElementById('username').value;
+    localStorage.setItem('name', username);
 }
 
 // Retrieve username value from local storage and display in UI 
@@ -446,6 +449,11 @@ if(quizzer) {
     document.getElementById('quizzer').innerText = "Guest";
 }
 
+// function removeOverlay() {
+//     if(localStorage.getItem('name')) {
+//         overlay.classList.add('hide');
+//     }
+// }
 
 startQuiz();
 
