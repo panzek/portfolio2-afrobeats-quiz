@@ -14,7 +14,6 @@
     --envy: #8dac9a;
 
     /* TYPOGRAPHY */
-    --header-text: 'Poppins', sans-serif; 
     --content-text: 'Roboto', sans-serif;
 
     /* CLAMP  */
@@ -53,6 +52,7 @@ h1 {
 }
 
 header {
+    font-size: clamp(16px, 5vw, 50px);
     align-items: center;
     display: flex;
     flex-direction: row;    
@@ -75,9 +75,10 @@ header {
     text-transform: uppercase;
 }
 
-/* main {
-    height: 100%;
-} */
+main {
+    height: 100vh;
+    width: 100vw;
+}
 
 /* Quiz area */
 
@@ -88,17 +89,17 @@ header {
     flex-direction: column;
     justify-content: center;
     margin-top: 10%;
-    width: 100vw;
+    width: 100%;
 }
 
 #quiz-box {
     background-color: var(--earthy-green);
-    border-radius: 5px 5px 0 0;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     padding: 10px 5px 15px;
+    margin-top: 25%;
     width: 100%;
 }
 
@@ -137,7 +138,8 @@ header {
     justify-content: center;
     padding: 10px;
     text-align: center;
-    width: 100%;
+    width: clamp(200px, 100%, 1300px);
+    height: 32%;
 }
 
 .question-box h2 {
@@ -169,7 +171,8 @@ header {
     justify-content: center;
     margin: 10px 0 10px;
     padding: .75em;
-    width: 100%;
+    width: clamp(200px, 100%, 1300px);
+    height: 22%;
 }
 
 .btn-wrapper {
@@ -188,6 +191,7 @@ button {
     background-color: var(--Asparagus);
     border: 1px solid var(--Asparagus);
     border-radius: 5px;
+    color: #000;
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: bolder;
@@ -217,6 +221,7 @@ button {
 /* footer */
 footer {
     align-items: center;
+    background-color: var(--off-white);
     display: flex;
     justify-content: center;
     padding: 20px 0;
@@ -376,7 +381,13 @@ and (orientation: portrait) {
     }
 
     .quiz-container {
-        margin: 0.7rem 0;
+        margin-top: 25%;
+        border-radius: none;
+    }
+
+    #quiz-box {
+        border-radius: 0;
+        margin-top: 25%;
     }
 
     .question-bar {
@@ -419,7 +430,7 @@ and (orientation: portrait) {
     }
 
     .question-box {
-        border-bottom: 1px solid var(--earthy-green);
+        height: 100vh;
         width: 90%;
     }
     
@@ -430,8 +441,13 @@ and (orientation: portrait) {
         font-size: 1.4rem;
         font-weight: bolder;
         justify-content: flex-start;
+        margin: 20px 0;
         padding: 1rem;
         text-align: center;
+    }
+
+    button {
+        margin: 2rem;
     }
 
     #copyrights-socials {
@@ -445,7 +461,7 @@ and (orientation: portrait) {
 and (orientation: portrait) {
 
     header {
-        background-color: var(--off-white);
+        background-color: var(--earthy-green);
     }
 
     #quiz-box {
@@ -455,9 +471,19 @@ and (orientation: portrait) {
     .quiz-container {
         margin-top: 0;
     }
+    
+    #question {
+        margin-top: 20px;
+    }
+
+    .question-box {
+        height: 100vh;
+        margin: 1rem
+    }
 
     button {
         width: 20%;
+        margin: 2rem;
     }
 
     #copyrights-socials {
@@ -507,17 +533,13 @@ and (orientation: landscape) {
 and (orientation: landscape) {
     
     body {
-        aspect-ratio: 16/9;
+        aspect-ratio: 12/9;
         background: var(--earthy-green) url('../images/hero-image-afrobeats1.webp') center center/cover no-repeat;
     }
 
     header {
         background-color: var(--off-white);
     }
-
-    main {
-        height: 100%;
-    }    
 
     .quiz-container {
         background: none;
@@ -528,12 +550,13 @@ and (orientation: landscape) {
     #quiz-box {
         border-radius: 10px 50px 0 0;
         width: 100%;
+        margin-top: 0;
     }   
 
     .question-box {
         border-radius: 10px 50px;
         margin-top: 5%;
-        width: 50%;
+        width: 65%;
     }
     
     #question {
@@ -542,6 +565,7 @@ and (orientation: landscape) {
 
     button {
         padding: 0.6rem;
+        width: 20%;
     }
 
     #copyrights-socials {
