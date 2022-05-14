@@ -18,14 +18,14 @@
     --content-text: 'Roboto', sans-serif;
 
     /* CLAMP  */
-    --step--2: clamp(0.69rem, calc(0.59rem + 0.52vw), 0.96rem);
-    --step--1: clamp(0.83rem, calc(0.69rem + 0.72vw), 1.20rem);
-    --step-0: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
-    --step-1: clamp(1.20rem, calc(0.94rem + 1.32vw), 1.88rem);
-    --step-2: clamp(1.44rem, calc(1.09rem + 1.76vw), 2.34rem);
-    --step-3: clamp(1.73rem, calc(1.26rem + 2.35vw), 2.93rem);
-    --step-4: clamp(2.07rem, calc(1.45rem + 3.10vw), 3.66rem);
-    --step-5: clamp(2.49rem, calc(1.67rem + 4.08vw), 4.58rem);
+    --step--2: clamp(0.69rem, calc(0.66rem + 0.19vw), 0.96rem);
+    --step--1: clamp(0.83rem, calc(0.79rem + 0.26vw), 1.20rem);
+    --step-0: clamp(1.00rem, calc(0.94rem + 0.35vw), 1.50rem);
+    --step-1: clamp(1.20rem, calc(1.12rem + 0.47vw), 1.88rem);
+    --step-2: clamp(1.44rem, calc(1.33rem + 0.63vw), 2.34rem);
+    --step-3: clamp(1.73rem, calc(1.58rem + 0.84vw), 2.93rem);
+    --step-4: clamp(2.07rem, calc(1.88rem + 1.11vw), 3.66rem);
+    --step-5: clamp(2.49rem, calc(2.23rem + 1.47vw), 4.58rem);
 }
 
 * {
@@ -39,7 +39,6 @@ html {
 }
 
 body {
-    background: var(--earthy-green) url('../images/hero-image-afrobeats2.webp') center center/cover no-repeat;
     display: flex;
     flex-direction: column;
     font-family: 'poppins', sans-serif;
@@ -55,7 +54,6 @@ h1 {
 
 header {
     align-items: center;
-    /* background-color: var(--earthy-green); */
     display: flex;
     flex-direction: row;    
     flex-wrap: wrap;
@@ -71,23 +69,26 @@ header {
 #logo {
     align-items: center;
     color: #000;
+    font-size: 1rem;
     letter-spacing: 4px;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-main {
+/* main {
     height: 100%;
-}
+} */
 
 /* Quiz area */
 
 .quiz-container {
     align-items: center;
+    background: var(--earthy-green) url('../images/hero-image-afrobeats3.jpg') center center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 10%;
+    width: 100vw;
 }
 
 #quiz-box {
@@ -98,6 +99,7 @@ main {
     flex-direction: column;
     justify-content: center;
     padding: 10px 5px 15px;
+    width: 100%;
 }
 
 .question-bar {
@@ -117,6 +119,10 @@ main {
 }
 
 .question-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px 5px 5px 50px;
     border: 1px solid var(--Asparagus);
     width: 90%;
@@ -131,6 +137,7 @@ main {
     justify-content: center;
     padding: 10px;
     text-align: center;
+    width: 100%;
 }
 
 .question-box h2 {
@@ -161,7 +168,7 @@ main {
     font-size: 1.3rem;
     justify-content: center;
     margin: 10px 0 10px;
-    padding: 10px;
+    padding: .75em;
     width: 100%;
 }
 
@@ -191,14 +198,11 @@ button {
 
 .correct {
     background-color: var(--Asparagus);
-    font-weight: bold;
-    font-size: 1.5rem;
 }
 
 .incorrect {
     background-color: var(--red-ochre);
     color: var(--off-white);
-    font-size: 1.5rem;
 }
 
 .quiz-header .fa-circle-check {
@@ -214,7 +218,6 @@ button {
 footer {
     align-items: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     padding: 20px 0;
     text-align: center;
@@ -223,8 +226,10 @@ footer {
 
 #copyrights-socials {
     display: flex;
+    gap: 1rem;
     justify-content: space-around;
-    width: 15%;
+    align-items: center;
+    width: 50%;
 }
 
 #copyrights-socials a {
@@ -355,12 +360,58 @@ input[type=text]:focus {
 
 /* Modal ends  */
 
+/* Tablets */
+/* Screen sizes equal to or larger than 280px wide */
+@media screen and (max-width: 280px) 
+and (orientation: portrait) {
+
+    header {
+        align-items: center;
+        background-color: var(--earthy-green);
+        padding: 0.5rem;
+    }
+
+    #logo {
+        font-size: 0.8rem;
+    }
+
+    .quiz-container {
+        margin: 0.7rem 0;
+    }
+
+    .question-bar {
+        flex-direction: column-reverse;
+        gap: 0.5rem;
+    }
+
+    #question {
+        font-size: 1.2rem;
+    }
+
+    .options {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    #copyrights-socials {
+        width: 60%;
+    }
+
+    footer {
+        padding: 0;
+    }
+}
+
 /* Screen sizes equal to or larger than 560px wide */
 @media screen and (max-width: 560px) 
 and (orientation: portrait) {
 
     header {
         background-color: var(--earthy-green);
+    }
+    
+    .quiz-container {
+        margin-top: 5%;
     }
 
     .question-box {
@@ -378,28 +429,28 @@ and (orientation: portrait) {
         padding: 1rem;
         text-align: center;
     }
-}
 
-/* Tablets */
-/* Screen sizes equal to or larger than 280px wide */
-@media screen and (min-width: 280px) 
-and (orientation: portrait) {
-
-    header {
-        align-items: center;
-        background-color: var(--earthy-green);
-        padding: 0.5rem;
+    #copyrights-socials {
+        width: 60%;
     }
-
-    .quiz-container {
-        margin: 0.7rem 0;
-    }
+    
 }
 
 /* Screen sizes equal to or larger than 768px wide */
 @media screen and (min-width: 768px) 
 and (orientation: portrait) {
 
+    #quiz-box {
+        width: 100%;
+    }
+
+    .quiz-container {
+        margin-top: 0;
+    }
+
+    #copyrights-socials {
+        width: 30%;
+    }
 }
 
 /* Landscape */
@@ -412,6 +463,10 @@ and (orientation: landscape) {
         width: 43%;
     }
 
+    #copyrights-socials {
+        width: 100%;
+    }
+
 }
 
 /* Screen sizes equal to or larger than 1024px wide */
@@ -419,7 +474,7 @@ and (orientation: landscape) {
 and (orientation: landscape) {
     
     body {
-        aspect-ratio: 16/8;
+        aspect-ratio: 16/9;
         background: var(--earthy-green) url('../images/hero-image-afrobeats1.webp') center center/cover no-repeat;
     }
 
@@ -427,7 +482,12 @@ and (orientation: landscape) {
         background-color: var(--off-white);
     }
 
+    main {
+        height: 100%;
+    }    
+
     .quiz-container {
+        background: none;
         margin-bottom: 0;
     }
 
@@ -444,11 +504,15 @@ and (orientation: landscape) {
     
     #question {
         font-size: 1.8rem;
-}
+    }
 
-#modal {
-    max-width: 30%;
-}
+    #copyrights-socials {
+        width: 15%;
+    }
+
+    #modal {
+        max-width: 30%;
+    }
 
 }
 

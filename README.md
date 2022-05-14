@@ -2,7 +2,7 @@
 [View Live Project Here](https://panzek.github.io/portfolio2-afrobeats-quiz/)
 
 ## Table of Contents
-* [Introduction](#Introduction)
+1. [Introduction](#introduction)
 
 1. [UX - User Experience Design](#UX-user-experience-design)
     * [User Stories](#user-stories) 
@@ -11,7 +11,7 @@
     * [Typography](#typography)
     * [Wireframes](#wireframes)
 
-1. [Features](#Features)
+1. [Features](#features)
     * [Existing features](#existing-features)
         * [Header](#header)
             - [Logo and Title](#logo-and-title)
@@ -25,7 +25,7 @@
     * [Languages Used](#languages-used)
     * [Frameworks, Libraries, and Programs Used](#Frameworks-libraries-and-programs-used) 
 
-1. Testing
+1. [Testing](#testing)
     * [Validator Testing](#validator-testing)
     * [Accessibility Testing](#accessibility-testing) 
 
@@ -35,7 +35,7 @@
 
 1. [Deployment](#deployment)
 1. [Credits](#credits)
-    * [content](#content)
+    * [Content](#content)
     * [Media](#media)
     * [Acknowledgements](#acknowledgements)
     
@@ -240,6 +240,7 @@ This global affirmation of Afrobeats is exemplified in the collaboration of inte
         * [Techsini](http://techsini.com/multi-mockup/index.php) was used to generate the website mockup.
         * [CSS Color Converter](http://maettig.com/?page=PHP/CSS_Color_Converter) was used to convert colors.
         * All jpeg and png images used in this project were first compressed using [TinyPng](https://tinypng.com/) and then converted from jpeg or png to webP using [Convertio](https://convertio.co/).
+        * [JavaScript Tutor](https://pythontutor.com/javascript.html) was used frequently to visualize JavaScript code execution.  
 
     * Footer: 
         * Social media icons were taken from [Font Awesome](https://fontawesome.com/)
@@ -260,7 +261,7 @@ This global affirmation of Afrobeats is exemplified in the collaboration of inte
 * Acknowledgements
     * To my two lovely daughters, **Onyinye** and **Ogo**, lovers of Afrobeats, who crafted the questions and provided the answers. Thank you!
     * [Matt Bodden](https://github.com/MattBCoding), you are a star! For that timely intervention, Thank You!
-    * [Akshat Garg](https://github.com/akshatnitd), my [Code Institute](https://github.com/Code-Institute-Org) mentor, for for all you do. Thank you!
+    * [Akshat Garg](https://github.com/akshatnitd), my [Code Institute](https://github.com/Code-Institute-Org) mentor, for all you do. Thank you!
     * To [Dave Horrocks](https://github.com/DaveyJH), you deserve a special mention. Thank you!
     * To all those who contributed to questions and answers in Slack, especially the “Project Portfolio 2”, “Peer Code Review”, Learn JavaScript, and 2022 Cohort Class channels that I visited regularly. Your comments provided insights, pointers, and motivation. Thank you!
     * To [Code Institute](https://github.com/Code-Institute-Org) Student care team for your care and understanding. Thank you!
