@@ -191,9 +191,9 @@ button {
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: bolder;
-    height: 5vh;
+    padding: 0.4rem;
     margin: auto;
-    width: 140px; 
+    width: 40%; 
 }
 
 .correct {
@@ -393,6 +393,10 @@ and (orientation: portrait) {
         font-size: 1rem;
     }
 
+    button {
+        width: 50%;
+    }
+
     #copyrights-socials {
         width: 60%;
     }
@@ -440,12 +444,20 @@ and (orientation: portrait) {
 @media screen and (min-width: 768px) 
 and (orientation: portrait) {
 
+    header {
+        background-color: var(--off-white);
+    }
+
     #quiz-box {
         width: 100%;
     }
 
     .quiz-container {
         margin-top: 0;
+    }
+
+    button {
+        width: 20%;
     }
 
     #copyrights-socials {
@@ -460,11 +472,32 @@ and (orientation: portrait) {
 and (orientation: landscape) {
     
     #quiz-box {
-        width: 43%;
+        width: 100%;
     }
 
     #copyrights-socials {
         width: 100%;
+    }
+}
+
+/* Screen sizes equal to or larger than 734px wide */
+@media screen and (min-width: 636px) 
+and (orientation: landscape) {
+
+    header {
+        background-color: var(--off-white);
+    }
+    
+    .quiz-container {
+        margin-top: 0;
+    }
+
+    button {
+        padding: 0.4rem;
+    }
+
+    #copyrights-socials {
+        width: 30%;
     }
 
 }
@@ -489,6 +522,7 @@ and (orientation: landscape) {
     .quiz-container {
         background: none;
         margin-bottom: 0;
+        margin-top: 10%;
     }
 
     #quiz-box {
@@ -506,8 +540,12 @@ and (orientation: landscape) {
         font-size: 1.8rem;
     }
 
+    button {
+        padding: 0.6rem;
+    }
+
     #copyrights-socials {
-        width: 15%;
+        width: 20%;
     }
 
     #modal {
