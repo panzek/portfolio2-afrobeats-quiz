@@ -99,7 +99,6 @@ main {
     flex-direction: column;
     justify-content: center;
     padding: 10px 5px 15px;
-    margin-top: 25%;
     width: 100%;
 }
 
@@ -387,7 +386,6 @@ and (orientation: portrait) {
 
     #quiz-box {
         border-radius: 0;
-        margin-top: 25%;
     }
 
     .question-bar {
@@ -430,7 +428,6 @@ and (orientation: portrait) {
     }
 
     .question-box {
-        height: 100vh;
         width: 90%;
     }
     
@@ -477,7 +474,7 @@ and (orientation: portrait) {
     }
 
     .question-box {
-        height: 100vh;
+        height: 60vh;
         margin: 1rem
     }
 
@@ -575,7 +572,6 @@ and (orientation: landscape) {
     #modal {
         max-width: 30%;
     }
-
 }
 
 /* Extra large Screen sizes equal to or larger than 2560px wide */
