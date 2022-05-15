@@ -38,6 +38,8 @@ html {
 }
 
 body {
+    /* aspect-ratio: 12/9; */
+    background: var(--earthy-green) url('../images/hero-image-afrobeats1.webp') center center/cover no-repeat;
     display: flex;
     flex-direction: column;
     font-family: 'poppins', sans-serif;
@@ -259,11 +261,8 @@ footer {
 }
 
 #modal {
-    background-color: var(--khaki);
-    border: none;
-    border-radius: 10px 50px;
     max-width: 80%;
-    height: 33%;
+    height: 50vh;
     margin: auto;
     position: absolute;
     bottom: 0;
@@ -287,6 +286,7 @@ footer {
 }
 
 #user-name {
+    background-color: var(--khaki);
     align-items: center;
     border: none;
     border-radius: 10px 50px;
@@ -349,9 +349,17 @@ and (orientation: portrait) {
         font-size: 0.8rem;
     }
 
+    #form-control {
+        margin: 0 0 1rem;
+    }
+
+    .get-username {
+        margin: 5px 5px 0;
+    }
+
     .quiz-container {
         margin-top: 25%;
-        border-radius: none;
+        border-radius: 0;
     }
 
     #quiz-box {
@@ -383,34 +391,15 @@ and (orientation: portrait) {
     footer {
         padding: 0;
     }
-
-    #modal {
-        height: 65%;
-    }
-}
-
-
-/* Screen sizes equal to or larger than 390px wide */
-@media screen and (min-width: 360px) 
-and (orientation: portrait) {
-    
-    #modal {
-        height: 55%;
-    }
-}
-
-/* Screen sizes equal to or larger than 390px wide */
-@media screen and (min-width: 390px) 
-and (orientation: portrait) {
-    
-    #modal {
-        height: 45%;
-    }
 }
 
 /* Screen sizes equal to or larger than 560px wide */
 @media screen and (max-width: 560px) 
 and (orientation: portrait) {
+
+    body {
+        background: none;
+    }
 
     .heading {
         background-color: var(--earthy-green);
@@ -455,6 +444,10 @@ and (orientation: portrait) {
 @media screen and (min-width: 768px) 
 and (orientation: portrait) {
 
+    body {
+        background: none;
+    }
+
     .heading {
         background-color: var(--earthy-green);
     }
@@ -483,19 +476,6 @@ and (orientation: portrait) {
 
     #copyrights-socials {
         width: 30%;
-    }
-
-    #modal {
-        height: 30%;
-    }
-}
-
-/* Screen sizes equal to or larger than 912px wide */
-@media screen and (min-width: 912px) 
-and (orientation: portrait) {
-
-    #modal {
-        height: 20vh;
     }
 }
 
@@ -533,31 +513,11 @@ and (orientation: landscape) {
     #copyrights-socials {
         width: 30%;
     }
-
-    #modal {
-        height: 30%;
-    }
-
-}
-
-/* Screen sizes equal to or larger than 912px wide */
-@media screen and (min-width: 912px) 
-and (orientation: landscape) {
-
-    #modal {
-        height: 20%;
-    }
-
 }
 
 /* Screen sizes equal to or larger than 1024px wide */
 @media screen and (min-width: 1024px) 
 and (orientation: landscape) {
-    
-    body {
-        aspect-ratio: 12/9;
-        background: var(--earthy-green) url('../images/hero-image-afrobeats1.webp') center center/cover no-repeat;
-    }
 
     header {
         background-color: var(--off-white);
@@ -605,36 +565,14 @@ and (orientation: landscape) {
     #copyrights-socials {
         width: 20%;
     }
-
-    #modal {
-        background-color: var(--earthy-green);
-        max-width: 30%;
-        height: 65%;
-    }
-
-    #start {
-        background-color: var(--Asparagus);
-        border: 2px solid var(--Asparagus);
-        border-radius: 1rem;
-    }
 }
 
 /* Extra large Screen sizes equal to or larger than 1280px wide */
 @media screen and (min-width: 1280px) 
 and (orientation: landscape) {
     
-    #modal {
-        height: 45%;
-    }
-    
-}
-
-/* Extra large Screen sizes equal to or larger than 1300px wide */
-@media screen and (min-width: 1300px) 
-and (orientation: landscape) {
-    
-    #modal {
-        height: 30%;
+    #user-name {
+        width: 40vw;
     }
     
 }

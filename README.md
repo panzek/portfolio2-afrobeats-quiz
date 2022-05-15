@@ -79,7 +79,7 @@ This global affirmation of Afrobeats is exemplified in the collaboration of inte
       * These are colors that can be found on the African plains and the color scheme is creatively applied for elegance in style, to keep the style “subtle and tasteful”, and to please and delight the user.
       * Also, extreme care was taken not to sacrifice WCAG 2.0 criteria in the altar of functional needs by checking color values for accessible contrast using [EightShapes’](https://contrast-grid.eightshapes.com/) color contrast grid tool. 
 
-           ![Color Scheme](doc/images/color-scheme-eight-shapes.png)
+           ![Color Scheme](doc/images/color-scheme-eight-shapes.webp)
 
  * Typography
     * [Roboto](https://fonts.google.com/specimen/Roboto)
@@ -90,27 +90,25 @@ This global affirmation of Afrobeats is exemplified in the collaboration of inte
     * The wireframes were created using [Balsamiq](https://balsamiq.com/). And they were designed for mobile, tablets, and desktop. 
         * Mobile
 
-        ![Mobile - Modal Page Wireframe](doc/wireframes/mobile-modal.png)
+        ![Mobile - Modal Page Wireframe](doc/wireframes/modal-mobile.webp)
 
-        ![Mobile - Next-Question Page Wireframe](doc/wireframes/mobile-next.png)
+        ![Mobile - Next-Question Page Wireframe](doc/wireframes/next-mobile.webp)
 
-        ![Mobile - Restart Page Wireframe](doc/wireframes/mobile-restart.png)
+        ![Mobile - Restart Page Wireframe](doc/wireframes/restart-mobile.webp)
 
-        ![Mobile - Feedback Page Wireframe](doc/wireframes/mobile-feedback.png)
+        ![Mobile - Feedback Page Wireframe](doc/wireframes/feedback.)
        
 
         * Desktop
 
         
-        ![Desktop - Modal Page Wireframe](doc/wireframes/desktop-modal.png)
+        ![Desktop - Modal Page Wireframe](doc/wireframes/modal-desktop.webp)
 
-        ![Desktop - Next-Question Page Wireframe](doc/wireframes/desktop-next.png)
+        ![Desktop - Next-Question Page Wireframe](doc/wireframes/next-desktop.webp)
         
-        ![Desktop - Restart Page Wireframe](doc/wireframes/desktop-restart.png)
+        ![Desktop - Feedback Page Wireframe](doc/wireframes/restart-desktop.webp)
 
-        ![Desktop - Feedback Page Wireframe](doc/wireframes/desktop-feedback.png)
-
-       
+    
     * In implementation, there was need to make the following changes to the initial concepts:
         * The audio switch idea is a nice thing to have because it will help to enhance good user experience, but I had to reconsider it due to time constraints. I was running out of time and needed to scale down the project to the basics. It is definitely a feature I will add in future projects of this kind.
 
@@ -121,24 +119,14 @@ This global affirmation of Afrobeats is exemplified in the collaboration of inte
             * The logo is a Font Awesome a green flower, a symbolic representation of the greens of Africa, a symbol of nature, regeneration, and renewal of Africa through its music, Afrobeats.
             * The logo and title have an implicit link to the homepage, following a long-standing web convention and for fluid user experience.
 
-            ![Logo and title](doc/images/afrobeats-quiz-logo.png)
-
-        * On mobile devices and small tablets, the logo and title sit above the navigation menu in a vertical position in the header.
-
-        ![Logo and site title position on mobile device](doc/images/logo-mobile.png)
-
-        * On desktop and larger tablets, the logo and title are aligned at the center of the page header. 
-
-        ![Logo and site title position on desktop](doc/images/logo-desktop.png)
-
-    * This Full responsive header with logo and title, and navigation menus is fixed and consistent across in all four pages (plus the two “hidden” pages) of the website to allow for easy navigation. 
+            ![Logo and title](doc/images/afrobeats-logo-title.png)
 
     * The background image
         * The background image is a green flower in a vase, strategically placed on the left-hand side of the page visibility and for a good user experience.
         * And the earthy green of the flower is consistent like the site logo in its depiction the greens of Africa, symbolic of nature, and its regenerative potential through the music and dance of Afrobeats.
         * The background images are in WebP file format to maintain both a low file size and high-quality.  
 
-        ![Homepage on desktop](doc/images/live-desktop-homepage.png)
+        ![Homepage on desktop](doc/images/homepage-desktop.webp)
 
     * Quiz Box
         * The Quiz Box, also called the quiz area, is split into three main sections: counter section, scores section, and questions section.
@@ -151,22 +139,20 @@ This global affirmation of Afrobeats is exemplified in the collaboration of inte
         * The quiz box is deliberately placed under the cover of the green flower leaf for shade and warmth that nature provides, and to represent Africa as welcoming.
         * So, the quizzer should take it that this quiz is a game, played in a soothing ambience. 
 
-    * Footer
-        * The footer section includes links to my three relevant social media accounts: Facebook, Instagram, and Twitter.
-        * The social networks links communicate with users and encourage them to keep connected with me via social media. The links will open to a new tab to allow easy navigation for the user.
-        * The footer also includes the copyrights.
-
-        ![Footer section on desktop](doc/images/live-desktop-footer.png)
-
     * Modal page
         * Modal feature 
 
-        ![Modal page desktop](doc/images/live-desktop-biography.png)
+        ![Modal page desktop](doc/images/modal-desktop.png)
 
     * Next Quiz Page
         * The Next Quiz Page provides the user 
 
         ![Next Quiz page on desktop](doc/images/live-desktop-books-page.png)
+    
+    * Feedback/Result Page
+        * The Feedback Page displays the result to the user at the end of the quiz. It congratulates the user for finishing the quiz, and based on the user's total score may suggest the to try the quiz once. And there is a restart button below the feedback area for the user to restart the quiz.
+
+        ![Feedback page on desktop](doc/images/feedback.webp)
 
 
 ## Technology Stack
