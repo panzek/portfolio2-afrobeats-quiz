@@ -16,7 +16,7 @@
     /* TYPOGRAPHY */
     --content-text: 'Roboto', sans-serif;
 
-    /* CLAMP  */
+    /* Linearly scale font size with CLAMP  */
     --step--2: clamp(0.69rem, calc(0.66rem + 0.19vw), 0.96rem);
     --step--1: clamp(0.83rem, calc(0.79rem + 0.26vw), 1.20rem);
     --step-0: clamp(1.00rem, calc(0.94rem + 0.35vw), 1.50rem);
@@ -265,8 +265,8 @@ footer {
 /* footer ends  */
 
 /* Modal starts */
-.overlay {
-    /* display: none; */
+#overlay {
+    display: none;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -291,11 +291,6 @@ footer {
 }
 
 /* Username form  */
-
-/* #user-hide {
-    display: none;
-} */
-
 #form-control {
     display: flex;
     justify-content: center;

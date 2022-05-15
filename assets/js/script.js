@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let questionCounter = document.getElementById('question-counter');
     let nextButton = document.getElementsByClassName('next-btn')[0];
     let restartButton = document.getElementsByClassName('restart-btn')[0];
-    let overlay = document.getElementsByClassName('overlay')[0];
+    let overlay = document.getElementById('overlay');
 
     nextButton.addEventListener('click', nextQuestion);
     restartButton.addEventListener('click', restartQuiz);
@@ -283,9 +283,8 @@ function startQuiz() {
     currentQuestionIndex = 0;
     updateQuestionCounter(); //increments count by 1 on first load
     restartButton.classList.add('hide');
-    // overlay.classList.remove('hide');
+    overlay.style.display = "block";
 
-    // handleSubmit();
     displayQuestion();
 }
 
@@ -306,7 +305,7 @@ function displayQuestion() {
         
         let optionsValue = choice.dataset.value;
         choice.innerHTML = selectedQuestion.answers['option' + optionsValue];
-     }
+    }
 
     //prevents question repeat
     questions.splice(currentQuestionIndex, 1); 
@@ -338,20 +337,20 @@ function getUserSelection(event) {
  */
 function checkAnswer(selectedAnswer, userAnswer) {
 
-        if(selectedAnswer === correctAnswer) {
-            userAnswer.classList.add('correct');
-            incrementScore();
-        } else {
-            userAnswer.classList.add('incorrect');
-            incrementWrongAnswer();
-        }
+    if(selectedAnswer === correctAnswer) {
+        userAnswer.classList.add('correct');
+        incrementScore();
+    } else {
+        userAnswer.classList.add('incorrect');
+        incrementWrongAnswer();
+    }
 
-        setTimeout( () => {
-            userAnswer.classList.remove('incorrect', 'correct');
-            for(let choice of choices) {
-                choice.removeEventListener('click', getUserSelection);
-            }
-        }, 500);
+    setTimeout( () => {
+        userAnswer.classList.remove('incorrect', 'correct');
+        for(let choice of choices) {
+            choice.removeEventListener('click', getUserSelection);
+        }
+    }, 500);
 }
 
 /**
@@ -405,15 +404,15 @@ function incrementWrongAnswer() {
  * Keeps tract of question counter and
  * increment the question count for each question answered by the user
  */
- function updateQuestionCounter() {  
+function updateQuestionCounter() {  
     currentQuestionIndex++;
     questionCounter.innerText = `Question ${currentQuestionIndex} / ${maxQuestions}`;
 }
 
 /**
- * restart the quiz on user click of the restart button at the end of every game
+ * restarts the quiz on user click of the restart button at the end of every game
  */
- function restartQuiz() {
+function restartQuiz() {
     nextButton.classList.remove('hide');
     restartButton.classList.add('hide');
 
@@ -436,24 +435,30 @@ function handleKey (event) {
 }
 
 startButton.addEventListener('click', handleSubmit);
-function handleSubmit () {
+function handleSubmit (event) {
+    event.preventDefault();
     username = document.getElementById('username').value;
     localStorage.setItem('name', username);
+
+    removeOverlay();
 }
 
-// Retrieve username value from local storage and display in UI 
-let quizzer = localStorage.getItem('name');
-if(quizzer) {
-    document.getElementById('quizzer').innerText = quizzer;
-} else {
-    document.getElementById('quizzer').innerText = "Guest";
-}
+/**
+ * Retrieves username value from local storage and display in UI
+ * then closes modal username form on getting and setting username to display quiz
+ */
+function removeOverlay() {
+    if(localStorage.getItem('name')) {
+        let quizzer = localStorage.getItem('name');
+        if(quizzer) {
+            document.getElementById('quizzer').innerText = quizzer;
+        } else {
+            document.getElementById('quizzer').innerText = "Guest";
+        }
+    }
 
-// function removeOverlay() {
-//     if(localStorage.getItem('name')) {
-//         overlay.classList.add('hide');
-//     }
-// }
+    overlay.style.display = "none";
+};
 
 startQuiz();
 
