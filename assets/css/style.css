@@ -51,28 +51,10 @@ h1 {
     text-align: center;
 }
 
-header {
+/* Heading  */
+.heading {
     font-size: clamp(16px, 5vw, 50px);
-    align-items: center;
-    display: flex;
-    flex-direction: row;    
-    flex-wrap: wrap;
-    justify-content: space-evenly;  
     padding: 10px;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-}
-
-/* logo */
-#logo {
-    align-items: center;
-    color: #000;
-    font-size: 1rem;
-    letter-spacing: 4px;
-    text-decoration: none;
-    text-transform: uppercase;
 }
 
 main {
@@ -124,7 +106,7 @@ main {
     justify-content: center;
     align-items: center;
     border-radius: 5px 5px 5px 50px;
-    border: 1px solid var(--Asparagus);
+    border: 2px solid var(--Asparagus);
     width: 90%;
 }
 
@@ -189,7 +171,7 @@ main {
 button {
     background-color: var(--Asparagus);
     border: 1px solid var(--Asparagus);
-    border-radius: 5px;
+    border-radius: 1rem;
     color: #000;
     cursor: pointer;
     font-size: 1.5rem;
@@ -277,7 +259,7 @@ footer {
 }
 
 #modal {
-    background-color: var(--earthy-green);
+    background-color: var(--khaki);
     border: none;
     border-radius: 10px 50px;
     max-width: 80%;
@@ -314,7 +296,6 @@ footer {
     margin: 10px auto;
     padding: 10px;
     text-align: center;
-    width: 100%;
 }
 
 .username-box {
@@ -346,15 +327,11 @@ input[type=text]:focus {
 }
 
 #start {
-    background-color: var(--Asparagus);
-    border: 1px solid var(--Asparagus);
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    font-weight: bolder;
-    height: 5vh;
+    background-color: var(--khaki);
+    border: 2px solid var(--Asparagus);
+    border-radius: 1rem;
     margin: auto;
-    width: 160px; 
+    width: 170px; 
 }
 
 /* Modal ends  */
@@ -364,10 +341,8 @@ input[type=text]:focus {
 @media screen and (max-width: 280px) 
 and (orientation: portrait) {
 
-    header {
-        align-items: center;
+    .heading {
         background-color: var(--earthy-green);
-        padding: 0.5rem;
     }
 
     #logo {
@@ -408,16 +383,48 @@ and (orientation: portrait) {
     footer {
         padding: 0;
     }
+
+    #modal {
+        height: 65%;
+    }
+}
+
+
+/* Screen sizes equal to or larger than 390px wide */
+@media screen and (min-width: 360px) 
+and (orientation: portrait) {
+    
+    #modal {
+        height: 55%;
+    }
+}
+
+/* Screen sizes equal to or larger than 390px wide */
+@media screen and (min-width: 390px) 
+and (orientation: portrait) {
+    
+    #modal {
+        height: 45%;
+    }
 }
 
 /* Screen sizes equal to or larger than 560px wide */
 @media screen and (max-width: 560px) 
 and (orientation: portrait) {
 
-    header {
+    .heading {
         background-color: var(--earthy-green);
     }
-    
+
+    /* Username form  */
+    #form-control {
+        flex-direction: column;
+    }
+
+    #user-name {
+        margin: 10px;
+    }
+
     .quiz-container {
         margin-top: 5%;
     }
@@ -438,10 +445,6 @@ and (orientation: portrait) {
         text-align: center;
     }
 
-    button {
-        margin: 2rem;
-    }
-
     #copyrights-socials {
         width: 60%;
     }
@@ -452,7 +455,7 @@ and (orientation: portrait) {
 @media screen and (min-width: 768px) 
 and (orientation: portrait) {
 
-    header {
+    .heading {
         background-color: var(--earthy-green);
     }
 
@@ -481,6 +484,19 @@ and (orientation: portrait) {
     #copyrights-socials {
         width: 30%;
     }
+
+    #modal {
+        height: 30%;
+    }
+}
+
+/* Screen sizes equal to or larger than 912px wide */
+@media screen and (min-width: 912px) 
+and (orientation: portrait) {
+
+    #modal {
+        height: 20vh;
+    }
 }
 
 /* Landscape */
@@ -498,11 +514,11 @@ and (orientation: landscape) {
     }
 }
 
-/* Screen sizes equal to or larger than 734px wide */
+/* Screen sizes equal to or larger than 636px wide */
 @media screen and (min-width: 636px) 
 and (orientation: landscape) {
 
-    header {
+    .heading {
         background-color: var(--off-white);
     }
     
@@ -516,6 +532,20 @@ and (orientation: landscape) {
 
     #copyrights-socials {
         width: 30%;
+    }
+
+    #modal {
+        height: 30%;
+    }
+
+}
+
+/* Screen sizes equal to or larger than 912px wide */
+@media screen and (min-width: 912px) 
+and (orientation: landscape) {
+
+    #modal {
+        height: 20%;
     }
 
 }
@@ -560,13 +590,53 @@ and (orientation: landscape) {
         width: 20%;
     }
 
+    button {
+        background-color: var(--Asparagus);
+        border: 1px solid var(--Asparagus);
+        border-radius: 1rem;
+        color: #000;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        padding: 0.4rem;
+        margin: auto;
+    }
+
     #copyrights-socials {
         width: 20%;
     }
 
     #modal {
+        background-color: var(--earthy-green);
         max-width: 30%;
+        height: 65%;
     }
+
+    #start {
+        background-color: var(--Asparagus);
+        border: 2px solid var(--Asparagus);
+        border-radius: 1rem;
+    }
+}
+
+/* Extra large Screen sizes equal to or larger than 1280px wide */
+@media screen and (min-width: 1280px) 
+and (orientation: landscape) {
+    
+    #modal {
+        height: 45%;
+    }
+    
+}
+
+/* Extra large Screen sizes equal to or larger than 1300px wide */
+@media screen and (min-width: 1300px) 
+and (orientation: landscape) {
+    
+    #modal {
+        height: 30%;
+    }
+    
 }
 
 /* Extra large Screen sizes equal to or larger than 2560px wide */
