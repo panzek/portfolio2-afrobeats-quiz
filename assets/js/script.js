@@ -351,6 +351,8 @@ function checkAnswer(selectedAnswer, userAnswer) {
             choice.removeEventListener('click', getUserSelection);
         }
     }, 500);
+
+    nextButton.classList.remove('hide');
 }
 
 /**
@@ -420,7 +422,6 @@ function restartQuiz() {
     startQuiz();
 }
 
-// form control 
 let username = document.getElementById('username').focus();
 let startButton = document.getElementById('start-btn');
 
@@ -458,6 +459,7 @@ function removeOverlay() {
     }
 
     overlay.style.display = "none";
+    nextButton.classList.add('hide');
 };
 
 startQuiz();

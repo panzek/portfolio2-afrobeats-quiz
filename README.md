@@ -1,8 +1,22 @@
 # Afrobeats Quiz
+
+* **Introduction**
+
+**Afrobeats** is best defined as music Out of Africa. Conceived in the late 1960s by the Nigerian artist and activist Fela Anikulapo-Kuti as a protest music that spoke truth to power, **Afrobeat (singular)** has been reimagined (and now **pluralised as Afrobeats**) by a new generation of music artists across the continent of Africa: Burna Boy, Master KG, Whizkid, Nonzus Magnus, P-Square, Angelique Kidjo, Davido, Shatta Wale, and many others, as an eclectic mixture of West African Afropop and South African Afro-house, stretching further beyond the confines of African continent to include UK/Ireland Afroswing/Afro bashment, Afro-Reggaeton, western rap, dancehall, R&B, and EDM.
+
+There was a time African music was essentially local, now with Afrobeats the world is its centre stage: from sold-out gigs at London’s 02 Arena to full house performances in Madison Square Garden New York City. From making strong showing in Billboard global charts and spending 86 weeks in the UK Official Chart Top 40 to scoping Grammys, BET, and other major international music awards. You will find An Garda Síochána (Irish police force) dancing to “Jerusalema”; Justine Biber vibing in pidgin English; and Janet Jackson miming “you want bam bam, you want to sing with the big boys”, a hook from Goya Menor and Nektunez’s “Ameno Amapiano.” Listening and dancing to African music is now cool!
+
+This global affirmation of Afrobeats is exemplified in the collaboration of international music super stars with African music artists: Rick Ross with P-Square, Wale with Wizkid, Kanye West with D'Banj, Maluma with Maître Gimz, Ed Sheeran with Fireboy, and Sam Smith with Burna Boy. In 2019, Beyoncé collaborated with 9 African music artists for her soundtrack album “The Lion King: The Gift,” revealing to **Good Morning America** that "I wanted it to be authentic to what is beautiful about the music in Africa." 
+
+* **The Goal of the Quiz**
+
+**The goal of this quiz** is to test the quizzer’s knowledge of Afrobeats? The scope is the global music arena, and its target audience is music lovers all over the world. But Afrobeats Quiz is not only about what is beautiful about African music, so the goal of this quiz is also to teach the quizzer all that is aesthetically nourishing about Africa: its music, dance, colors, and people.  
+
+![Afrobeats Quiz Mockup](doc/images/afrobeats-mockup.png)
+
 [View Live Project Here](https://panzek.github.io/portfolio2-afrobeats-quiz/)
 
 ## Table of Contents
-1. [Introduction](#introduction)
 
 1. [UX - User Experience Design](#UX-user-experience-design)
     * [User Stories](#user-stories) 
@@ -29,27 +43,11 @@
     * [Validator Testing](#validator-testing)
     * [Accessibility Testing](#accessibility-testing) 
 
-1. [Fixed Bugs](#fixed-bugs)
-    * [Reported](#reported) 
-    * [Resolved](#resolved)
-
 1. [Deployment](#deployment)
 1. [Credits](#credits)
     * [Content](#content)
     * [Media](#media)
     * [Acknowledgements](#acknowledgements)
-    
-* **Introduction**
-
-**Afrobeats** is best defined as music Out of Africa. Conceived in the late 1960s by the Nigerian artist and activist Fela Anikulapo-Kuti as a protest music that spoke truth to power, **Afrobeat (singular)** has been reimagined (and now **pluralised as Afrobeats**) by a new generation of music artists across the continent of Africa: Burna Boy, Master KG, Whizkid, Nonzus Magnus, P-Square, Angelique Kidjo, Davido, Shatta Wale, and many others, as an eclectic mixture of West African Afropop and South African Afro-house, stretching further beyond the confines of African continent to include UK/Ireland Afroswing/Afro bashment, Afro-Reggaeton, western rap, dancehall, R&B, and EDM.
-
-There was a time African music was essentially local, now with Afrobeats the world is its centre stage: from sold-out gigs at London’s 02 Arena to full house performances in Madison Square Garden New York City. From making strong showing in Billboard global charts and spending 86 weeks in the UK Official Chart Top 40 to scoping Grammys, BET, and other major international music awards. You will find An Garda Síochána (Irish police force) dancing to “Jerusalema”; Justine Biber vibing in pidgin English; and Janet Jackson miming “you want bam bam, you want to sing with the big boys”, a hook from Goya Menor and Nektunez’s “Ameno Amapiano.” Listening and dancing to African music is now cool!
-
-This global affirmation of Afrobeats is exemplified in the collaboration of international music super stars with African music artists: Rick Ross with P-Square, Wale with Wizkid, Kanye West with D'Banj, Maluma with Maître Gimz, Ed Sheeran with Fireboy, and Sam Smith with Burna Boy. In 2019, Beyoncé collaborated with 9 African music artists for her soundtrack album “The Lion King: The Gift,” revealing to **Good Morning America** that "I wanted it to be authentic to what is beautiful about the music in Africa." 
-
-* **The Goal of the Quiz**
-
-**The goal of this quiz** is to test the quizzer’s knowledge of Afrobeats? The scope is the global music arena, and its target audience is music lovers all over the world. But Afrobeats Quiz is not only about what is beautiful about African music, so the goal of this quiz is also to teach the quizzer all that is aesthetically nourishing about Africa: its music, dance, colors, and people.  
 
 ## User Experience (UX)
 ### User Stories 
@@ -94,10 +92,8 @@ This global affirmation of Afrobeats is exemplified in the collaboration of inte
 
         ![Mobile - Next-Question Page Wireframe](doc/wireframes/next-mobile.webp)
 
-        ![Mobile - Restart Page Wireframe](doc/wireframes/restart-mobile.webp)
+        ![Mobile - Feedback Page Wireframe](doc/wireframes/restart-mobile.webp)
 
-        ![Mobile - Feedback Page Wireframe](doc/wireframes/feedback.)
-       
 
         * Desktop
 
@@ -117,7 +113,6 @@ This global affirmation of Afrobeats is exemplified in the collaboration of inte
     * Header
         * Logo and Title
             * The logo is a Font Awesome a green flower, a symbolic representation of the greens of Africa, a symbol of nature, regeneration, and renewal of Africa through its music, Afrobeats.
-            * The logo and title have an implicit link to the homepage, following a long-standing web convention and for fluid user experience.
 
             ![Logo and title](doc/images/afrobeats-logo-title.png)
 
@@ -139,15 +134,10 @@ This global affirmation of Afrobeats is exemplified in the collaboration of inte
         * The quiz box is deliberately placed under the cover of the green flower leaf for shade and warmth that nature provides, and to represent Africa as welcoming.
         * So, the quizzer should take it that this quiz is a game, played in a soothing ambience. 
 
-    * Modal page
-        * Modal feature 
+    * Modal Username Form page
+        * Modal Username Form page contains a username form. Play the game requires the user to first create a username before starting the quiz. However, the user may decide not to create a username and opt for the alternative option, which is to play as a guest.
 
         ![Modal page desktop](doc/images/modal-desktop.png)
-
-    * Next Quiz Page
-        * The Next Quiz Page provides the user 
-
-        ![Next Quiz page on desktop](doc/images/live-desktop-books-page.png)
     
     * Feedback/Result Page
         * The Feedback Page displays the result to the user at the end of the quiz. It congratulates the user for finishing the quiz, and based on the user's total score may suggest the to try the quiz once. And there is a restart button below the feedback area for the user to restart the quiz.
@@ -188,16 +178,13 @@ This global affirmation of Afrobeats is exemplified in the collaboration of inte
     * [Accessibility Insights](https://accessibilityinsights.io/) was used to check and fix accessibility issues.
     * [Chrome's Lighthouse](https://developers.google.com/web/tools/lighthouse) - used to test accessibility, and the check returned the reports below: 
 
-      * Mobile
-    
-        ![Sufficient color contrast](doc/images/lighthouse-audit-mobile.png)
-
       * Desktop
     
-        ![Sufficient color contrast](doc/images/lighthouse-audit-desktop.png)
+        ![Lighthouse Report Desktop](doc/images/lighthouse-report-desktop.png)
 
-* Fixed Bugs:
-    * [Accessibility Insights]( https://accessibilityinsights.io/) 
+      * Mobile
+    
+        ![Lighthouse Report Mobile](doc/images/lighthouse-report-mobile.png)
 
 ## Deployment 
 * The website was deployed to GitHub Pages. These were the steps taken for the deployment:
@@ -228,11 +215,8 @@ This global affirmation of Afrobeats is exemplified in the collaboration of inte
         * All jpeg and png images used in this project were first compressed using [TinyPng](https://tinypng.com/) and then converted from jpeg or png to webP using [Convertio](https://convertio.co/).
         * [JavaScript Tutor](https://pythontutor.com/javascript.html) was used frequently to visualize JavaScript code execution.  
 
-    * Footer: 
-        * Social media icons were taken from [Font Awesome](https://fontawesome.com/)
-
     * README: 
-        * Introduction section: Statistic that in 2019, Afrobeats artists collectively spent 86 weeks in the UK Official Chart Top 40 was taken from [BBC Newsbeat](https://www.bbc.com/news/newsbeat-53446263).
+        * Introduction section: The statistic that in 2019, Afrobeats artists collectively spent 86 weeks in the UK Official Chart Top 40 was taken from [BBC Newsbeat](https://www.bbc.com/news/newsbeat-53446263).
         * Color Scheme in Design section: [Kate Bailey’s “How to Add African Safari Decor to Your Home”](https://interiordesign.lovetoknow.com/Decorating_with_a_Safari_Theme) helped to shape my Afrobeats quiz idea in colors.  
 
 * Media
